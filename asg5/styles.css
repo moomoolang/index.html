@@ -1,7 +1,7 @@
 /* ===== Global Styles ===== */
 body {
   font-family: 'Comic Neue', sans-serif;
-  background-image: url('images/cute-pattern.png'); /* cute repeating pattern */
+  background-image: url('images/sakura.png'); /* cute repeating pattern */
   background-repeat: repeat;
   margin: 0;
   padding: 0 20px;
@@ -153,5 +153,6 @@ footer {
   color: #555;
   font-size: 0.9rem;
 }
+
 
 
