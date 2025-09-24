@@ -1,53 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Melody's Homepage</title>
+  <meta charset="UTF-8">
+  <title>Dinner Invitation</title>
 
-<!-- Google Fonts: Poppins for headings, Open Sans for body -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
-
-
-  <!-- Link to external CSS -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Melody</h1>
-    <!-- Replace "me-partner.jpg" with your actual image file -->
- <img src="images/me-n-mypartner.jpg" alt="Me and my partner">
-
+    <h1>Dinner Invitation</h1>
+    <p>Join us for a magical evening with three special guests!</p>
   </header>
 
   <main>
-    <section class="about">
-      <h2>About Me</h2>
-      <p><strong>Interests:</strong> Traveling, Cooking, Music, Writing, Art, Fitness</p>
-      <p><strong>Hobbies:</strong> Drawing, Listening to music, Singing, Cooking, Swimming, Working Out</p>
-      <p><strong>Goals:</strong> Be successful in my academics, graduate early, be financially stable, and live a care-free life.</p>
+    <!-- Guests -->
+    <section class="guests">
+      <h2>Guests of Honor</h2>
+
+      <div class="guest">
+        <h3>Ethan</h3>
+        <img src="images/ethan.jpg" alt="Ethan">
+        <p>Ethan, my boyfriend, is an essential guest. Sharing this night with him makes the dinner truly special.</p>
+      </div>
+
+      <div class="guest">
+        <h3>Rumi (Kpop Demon Hunters)</h3>
+        <img src="images/rumi.jpg" alt="Rumi from Kpop Demon Hunters">
+        <p>Rumi is stylish and fierce. We love her character, and it’s fun to match as Rumi and Jinu on Discord!</p>
+      </div>
+
+      <div class="guest">
+        <h3>Jinu (Kpop Demon Hunters)</h3>
+        <img src="images/jinu.gif" alt="Animated Jinu GIF" class="jinu-gif">
+        <p>Jinu completes the trio. Having him at dinner makes it playful, fun, and meaningful!</p>
+      </div>
     </section>
 
-    <section class="assignments">
-      <h2>Assignments</h2>
-      <ul class="assignment-list">
-        <li><a href="asg1/index.html"><strong>Assignment 1:</strong> Introduction</a></li>
-        <li><a href="asg2/index.html"><strong>Assignment 2:</strong> Project Work</a></li>
-        <li><a href="asg3/favorite-band.html"><strong>In-Class Exercise 3:</strong> Favorite Band</a></li>
-        <li><a href="q&a and creative brief/index.html"><strong>Assignment 3:</strong> Q&amp;A and Creative Brief</a></li>
-        <li><a href="asg4/asg4-in-class-exercise/index.html"><strong>In-Class Exercise 4:</strong> Web Exercise</a></li>
-        <li><a href="asg5/dinner-invitation.html"><strong>Assignment 5 - Dinner Invitation</a></li>
-
+    <!-- Menu -->
+    <section class="menu">
+      <h2>Menu</h2>
+      <ul>
+        <li><strong>Appetizers:</strong> Crispy rice with sashimi-grade tuna, Cream Cheese Rangoons</li>
+        <li><strong>Main Course:</strong> Teriyaki-glazed salmon, Korean BBQ short ribs</li>
+        <li><strong>Dessert:</strong> Matcha tiramisu, Strawberry bingsu</li>
+        <li><strong>Drinks:</strong> Lychee iced tea, Sparkling yuzu lemonade</li>
       </ul>
+    </section>
+
+    <!-- RSVP Form -->
+    <section class="rsvp">
+      <h2>RSVP</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label>Will you be bringing a guest?</label>
+        <input type="radio" id="yes" name="guest" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="guest" value="no">
+        <label for="no">No</label>
+
+        <label for="diet">Dietary Preferences:</label>
+        <textarea id="diet" name="diet"></textarea>
+
+        <input type="submit" value="Submit RSVP">
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Melody</p>
+    <p>&copy; 2025 Dinner Invitation</p>
   </footer>
 </body>
 </html>
-
-
 
 
 
