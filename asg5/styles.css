@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+ font-family: 'Comic Neue', sans-serif;
 
   /* Cute background */
   background-image: url('images/sakura.png'); 
@@ -7,12 +7,13 @@ body {
   background-size: auto; 
   
   margin: 20px;
+  color: #333;
 }
 
 /* Headings */
 h1, h2 {
-  font-family: 'Baloo 2', cursive;
-  color: #d63384; /* a soft pink/lilac color for cuteness */
+  font-family: 'Fredoka One', cursive;
+  color: #d63384; /* soft pink/lilac for cuteness */
   text-align: center;
 }
 
@@ -24,7 +25,7 @@ p {
 
 /* List items */
 li {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Comic Neue', sans-serif;
   font-weight: 500;
   color: #555;
 }
@@ -78,5 +79,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #a60000;
 }
+
 
 
