@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dinner Invitation</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Dinner Invitation</h1>
+  <p>You are cordially invited to a special dinner with three meaningful and exciting guests.</p>
+
+  <div class="guest">
+    <h2>Ethan</h2>
+    <img src="images/ethan.jpg" alt="Ethan">
+    <p>I would like to invite Ethan, my boyfriend, for dinner because he’s such a meaningful person in my life. It would feel incomplete to have dinner with other important guests without including him. Sharing this night with him makes the event truly special.</p>
+  </div>
+
+  <div class="guest">
+    <h2>Rumi (Kpop Demon Hunters)</h2>
+    <img src="images/rumi.jpg" alt="Rumi from Kpop Demon Hunters">
+    <p>Rumi is a fierce and stylish character from <em>Kpop Demon Hunters</em>. Both Ethan and I love her character, and since we are matching as Rumi and Jinu on Discord, it feels fitting to have her join our dinner as one of the guests of honor.</p>
+  </div>
+
+<div class="guest">
+  <h2>Jinu (Kpop Demon Hunters)</h2>
+  <img src="images/jinu.gif" alt="Animated Jinu GIF">
+  <p>Jinu is another iconic character from <em>Kpop Demon Hunters</em>. Since Ethan and I love these characters and match as them, having Jinu at the dinner completes the trio and makes the evening even more fun and meaningful.</p>
+</div>
+
+  </div>
+
+  <h2>Menu</h2>
+  <ul>
+    <li>Appetizers
+      <ul>
+        <li>Crispy rice with fresh sashimi-grade tuna</li>
+        <li>Cream Cheese Rangoons</li>
+      </ul>
+    </li>
+    <li>Main Course
+      <ul>
+        <li>Korean Rose Tteokbokki (Korean Rice-cakes in a creamy cheesy spicy sauce)</li>
+        <li>Korean BBQ short ribs with kimchi on the side</li>
+      </ul>
+    </li>
+    <li>Dessert
+      <ul>
+        <li>Matcha tiramisu</li>
+        <li>Strawberry bingsu (Korean shaved ice dessert)</li>
+      </ul>
+    </li>
+    <li>Drinks
+      <ul>
+        <li>Lychee iced tea</li>
+        <li>Sparkling yuzu lemonade</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>RSVP</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label>Will you be bringing a guest?</label>
+    <input type="radio" id="yes" name="guest" value="yes">
+    <label for="yes">Yes</label>
+    <input type="radio" id="no" name="guest" value="no">
+    <label for="no">No</label>
+
+    <label for="diet">Dietary Preferences:</label>
+    <textarea id="diet" name="diet"></textarea>
+
+    <br><br>
+    <input type="submit" value="Submit RSVP">
+  </form>
+</body>
+</html>

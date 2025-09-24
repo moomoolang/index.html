@@ -1,0 +1,76 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('images/tile-background.png');
+  background-repeat: repeat;
+  margin: 20px;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: darkred;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+}
+
+p {
+  color: #333;
+  line-height: 1.5;
+}
+
+li {
+  color: #444;
+  font-weight: 600;
+}
+
+.guest {
+  margin-bottom: 40px;
+}
+
+img {
+  max-width: 200px;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+}
+
+input[type="text"], textarea {
+  font-family: 'Open Sans', sans-serif;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input[type="submit"] {
+  background-color: darkred;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #a60000;
+}
