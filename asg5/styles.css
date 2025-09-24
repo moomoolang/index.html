@@ -9,24 +9,24 @@ body {
   margin: 20px;
 }
 
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  color: darkred;
+/* Headings */
+h1, h2 {
+  font-family: 'Baloo 2', cursive;
+  color: #d63384; /* a soft pink/lilac color for cuteness */
+  text-align: center;
 }
 
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #222;
-}
-
+/* Paragraphs */
 p {
-  color: #333;
   line-height: 1.5;
+  color: #444;
 }
 
+/* List items */
 li {
-  color: #444;
-  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  color: #555;
 }
 
 .guest {
@@ -78,4 +78,5 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #a60000;
 }
+
 
