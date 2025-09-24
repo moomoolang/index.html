@@ -1,52 +1,97 @@
+/* Global Styles */
 body {
- font-family: 'Comic Neue', sans-serif;
-
-  /* Cute background */
-  background-image: url('images/sakura.png'); 
+  font-family: 'Comic Neue', sans-serif;
+  background-image: url('images/cute-pattern.png');
   background-repeat: repeat;
-  background-size: auto; 
-  
-  margin: 20px;
+  margin: 0;
+  padding: 0 20px;
   color: #333;
 }
 
-/* Headings */
-h1, h2 {
-  font-family: 'Fredoka One', cursive;
-  color: #d63384; /* soft pink/lilac for cuteness */
+header {
   text-align: center;
+  padding: 2rem 1rem;
 }
 
-/* Paragraphs */
-p {
-  line-height: 1.5;
-  color: #444;
+h1 {
+  font-family: 'Fredoka One', cursive;
+  color: #d63384;
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
 }
 
-/* List items */
-li {
-  font-family: 'Comic Neue', sans-serif;
-  font-weight: 500;
+header p {
+  font-size: 1.2rem;
   color: #555;
 }
 
-.guest {
-  margin-bottom: 40px;
+/* Guests Section */
+.guests {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
 }
 
-img {
+.guest {
+  margin-bottom: 3rem;
+  background-color: rgba(255, 182, 193, 0.3); /* soft pink overlay */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.guest:hover {
+  transform: scale(1.02);
+}
+
+.guest img {
   max-width: 200px;
   border-radius: 12px;
-  display: block;
   margin-bottom: 10px;
 }
 
-form {
-  margin-top: 30px;
+img.jinu-gif {
+  max-width: 250px;
+  border: 2px solid #d63384;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Menu Section */
+.menu {
+  max-width: 700px;
+  margin: 2rem auto;
   padding: 20px;
-  border: 2px solid #ccc;
+  background-color: rgba(173, 216, 230, 0.3); /* light blue overlay */
   border-radius: 12px;
-  background-color: #f9f9f9;
+}
+
+.menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu li {
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #444;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.menu li:hover {
+  transform: translateX(5px);
+  color: #d63384;
+}
+
+/* RSVP Form */
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 label {
@@ -55,29 +100,37 @@ label {
   font-weight: bold;
 }
 
-textarea {
+textarea, input[type="text"] {
   width: 100%;
-  height: 80px;
-}
-
-input[type="text"], textarea {
-  font-family: 'Open Sans', sans-serif;
-  padding: 6px;
+  padding: 8px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-family: 'Comic Neue', sans-serif;
 }
 
 input[type="submit"] {
-  background-color: darkred;
+  background-color: #d63384;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
+  font-family: 'Fredoka One', cursive;
   cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 input[type="submit"]:hover {
-  background-color: #a60000;
+  background-color: #a6005a;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+  color: #555;
 }
 
 
