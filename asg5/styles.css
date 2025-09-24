@@ -1,13 +1,14 @@
-/* Global Styles */
+/* ===== Global Styles ===== */
 body {
   font-family: 'Comic Neue', sans-serif;
-  background-image:  <img src="sakura.png">
+  background-image: url('images/sakura.png'); /* cute repeating pattern */
   background-repeat: repeat;
   margin: 0;
   padding: 0 20px;
   color: #333;
 }
 
+/* ===== Header ===== */
 header {
   text-align: center;
   padding: 2rem 1rem;
@@ -15,9 +16,9 @@ header {
 
 h1 {
   font-family: 'Fredoka One', cursive;
-  color: #d63384;
+  color: #d63384; /* soft pink for cute aesthetic */
   font-size: 3rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 
 header p {
@@ -25,7 +26,7 @@ header p {
   color: #555;
 }
 
-/* Guests Section */
+/* ===== Guests Section ===== */
 .guests {
   max-width: 900px;
   margin: 2rem auto;
@@ -34,10 +35,10 @@ header p {
 
 .guest {
   margin-bottom: 3rem;
-  background-color: rgba(255, 182, 193, 0.3); /* soft pink overlay */
-  border-radius: 15px;
+  background-color: rgba(255, 228, 225, 0.6); /* soft pastel pink overlay */
+  border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -45,25 +46,32 @@ header p {
   transform: scale(1.02);
 }
 
+.guest h3 {
+  font-family: 'Fredoka One', cursive;
+  color: #d63384;
+  margin-bottom: 10px;
+}
+
 .guest img {
   max-width: 200px;
-  border-radius: 12px;
-  margin-bottom: 10px;
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 
 img.jinu-gif {
   max-width: 250px;
   border: 2px solid #d63384;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Menu Section */
+/* ===== Menu Section ===== */
 .menu {
   max-width: 700px;
   margin: 2rem auto;
-  padding: 20px;
-  background-color: rgba(173, 216, 230, 0.3); /* light blue overlay */
-  border-radius: 12px;
+  padding: 25px;
+  background-color: rgba(255, 240, 245, 0.7); /* very light pink overlay */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .menu ul {
@@ -74,7 +82,7 @@ img.jinu-gif {
 .menu li {
   font-family: 'Comic Neue', sans-serif;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #444;
   transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -84,14 +92,21 @@ img.jinu-gif {
   color: #d63384;
 }
 
-/* RSVP Form */
-form {
+/* ===== RSVP Form ===== */
+.rsvp {
   max-width: 500px;
   margin: 2rem auto;
   padding: 25px;
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rsvp h2 {
+  font-family: 'Fredoka One', cursive;
+  color: #d63384;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 label {
@@ -100,13 +115,18 @@ label {
   font-weight: bold;
 }
 
-textarea, input[type="text"] {
+textarea,
+input[type="text"] {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
   font-family: 'Comic Neue', sans-serif;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
 }
 
 input[type="submit"] {
@@ -114,7 +134,7 @@ input[type="submit"] {
   color: white;
   padding: 12px 25px;
   border: none;
-  border-radius: 12px;
+  border-radius: 15px;
   font-family: 'Fredoka One', cursive;
   cursor: pointer;
   font-size: 1rem;
@@ -126,14 +146,10 @@ input[type="submit"]:hover {
   transform: scale(1.05);
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
   text-align: center;
   margin: 3rem 0 1rem 0;
   color: #555;
+  font-size: 0.9rem;
 }
-
-
-
-
-
