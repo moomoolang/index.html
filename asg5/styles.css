@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
   font-family: 'Comic Neue', sans-serif;
-  background-image: url('images/sakura.png');
+  background-image:  <img src="sakura.png">
   background-repeat: repeat;
   margin: 0;
   padding: 0 20px;
@@ -132,6 +132,7 @@ footer {
   margin: 3rem 0 1rem 0;
   color: #555;
 }
+
 
 
 
