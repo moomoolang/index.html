@@ -1,9 +1,9 @@
 /* Global Styles */
 body {
   margin: 0;
-  font-family: 'Lora', serif; /* Lora for body text */
+  font-family: 'Open Sans', sans-serif; /* clean, readable body font */
   color: #2e2e2e;
-  background: linear-gradient(135deg, #c8a2c8, #89CFF0); /* lilac → blue */
+  background: linear-gradient(135deg, #c8a2c8, #89CFF0);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -102,4 +102,5 @@ footer {
   opacity: 0.8;
   font-size: 0.9rem;
 }
+
 
