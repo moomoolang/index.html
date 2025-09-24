@@ -1,24 +1,33 @@
 /* ===== Global Styles ===== */
 body {
   font-family: 'Comic Neue', sans-serif;
-  background-image: url('images/sakura.png'); /* cute repeating pattern */
+  background-image: url('images/sakura.png');
   background-repeat: repeat;
+  background-size: auto;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   color: #333;
+}
+
+/* ===== Centered Layout ===== */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
 }
 
 /* ===== Header ===== */
 header {
   text-align: center;
-  padding: 2rem 1rem;
+  margin-bottom: 3rem;
 }
 
 h1 {
   font-family: 'Fredoka One', cursive;
-  color: #d63384; /* soft pink for cute aesthetic */
+  color: #d63384;
   font-size: 3rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 header p {
@@ -26,54 +35,48 @@ header p {
   color: #555;
 }
 
-/* ===== Guests Section ===== */
-.guests {
-  max-width: 900px;
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.guest {
-  margin-bottom: 3rem;
-  background-color: rgba(255, 228, 225, 0.6); /* soft pastel pink overlay */
+/* ===== Card Style Sections ===== */
+section {
+  background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
   border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
-.guest:hover {
+section:hover {
   transform: scale(1.02);
+}
+
+/* ===== Guests Section ===== */
+.guest {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .guest h3 {
   font-family: 'Fredoka One', cursive;
   color: #d63384;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .guest img {
   max-width: 200px;
   border-radius: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 img.jinu-gif {
   max-width: 250px;
+  border-radius: 15px;
   border: 2px solid #d63384;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* ===== Menu Section ===== */
-.menu {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 25px;
-  background-color: rgba(255, 240, 245, 0.7); /* very light pink overlay */
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
 .menu ul {
   list-style: none;
   padding-left: 0;
@@ -81,32 +84,17 @@ img.jinu-gif {
 
 .menu li {
   font-family: 'Comic Neue', sans-serif;
-  font-weight: 500;
-  margin-bottom: 12px;
+  font-size: 1rem;
+  margin-bottom: 10px;
   color: #444;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.menu li:hover {
-  transform: translateX(5px);
-  color: #d63384;
 }
 
 /* ===== RSVP Form ===== */
-.rsvp {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 25px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
 .rsvp h2 {
   font-family: 'Fredoka One', cursive;
   color: #d63384;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 label {
@@ -153,6 +141,5 @@ footer {
   color: #555;
   font-size: 0.9rem;
 }
-
 
 
