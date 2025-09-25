@@ -1,67 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Dinner Invitation</title>
- <!-- Google Fonts: Baloo 2 for headings, Quicksand for body -->
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Dinner Invitation</h1>
-  <p>You are cordially invited to a special dinner with three meaningful and exciting guests.</p>
+  <div class="invitation-container">
+    <header>
+      <h1>Dinner Invitation</h1>
+      <p class="subtitle">You are cordially invited to a special dinner with three meaningful and exciting guests.</p>
+    </header>
 
-  <div class="guest">
-    <h2>Ethan</h2>
-    <img src="images/ethan.jpg" alt="Ethan">
-    <p>I would like to include my partner, Ethan to this dinner because he's a very meaningful person in my life. Excluding him, wouldn't make this night special and memorable, and I want to invite other people who will make the night fun and entertaining.</p>
+    <section class="guests">
+      <h2>Guests of Honor</h2>
+
+      <div class="guest-card">
+        <img src="images/ethan.jpg" alt="Ethan">
+        <p>I would like to include my partner, Ethan to this dinner because he's a very meaningful person in my life. Excluding him, wouldn't make this night special and memorable, and I want to invite other people who will make the night fun and entertaining.</p>
+      </div>
+
+      <div class="guest-card">
+        <img src="images/rumi.jpg" alt="Rumi">
+        <p>Rumi is an iconic character from Kpop Demon Hunters. Both Ethan and I love her character, and we are also matching as Rumi and Jinu on Discord, it would be great to have her join our dinner as one of the guests of honor.</p>
+      </div>
+
+      <div class="guest-card">
+        <img src="images/jinu.gif" alt="Jinu">
+        <p>Jinu is another cool character from Kpop Demon Hunters. Ethan and I love these characters and match as them and we relate to them, so having Jinu at the dinner completes the trio and makes the evening even more fun and meaningful.</p>
+      </div>
+    </section>
+
+    <section class="menu">
+      <h2>Menu</h2>
+      <ul>
+        <li><strong>🍣Appetizers:</strong> Crispy rice with sashimi-grade tuna, Cream Cheese Rangoons</li>
+        <li><strong>🍲Main Course:</strong> Korean Rose Tteokbokki, Korean BBQ short ribs with kimchi</li>
+        <li><strong>🍨Dessert:</strong> Matcha Tiramisu, Strawberry Bingsu</li>
+        <li><strong>🥂Drinks:</strong> Lychee Iced Tea, Sparkling Yuzu Lemonade</li>
+      </ul>
+    </section>
+
+    <section class="rsvp">
+      <h2>RSVP</h2>
+      <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <p>Will you be bringing a guest?</p>
+        <label><input type="radio" name="guest" value="yes"> Yes</label>
+        <label><input type="radio" name="guest" value="no"> No</label>
+
+        <label for="diet">Dietary Preferences:</label>
+        <textarea id="diet" name="diet" rows="4"></textarea>
+
+        <button type="submit">Submit RSVP</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>Best Regards, Melody</p>
+    </footer>
   </div>
-
-  <div class="guest">
-    <h2>Rumi (Kpop Demon Hunters)</h2>
-    <img src="images/rumi.jpg" alt="Rumi from Kpop Demon Hunters">
-    <p>Rumi is an iconic character from <em>Kpop Demon Hunters</em>. Both Ethan and I love her character, and  we are also matching as Rumi and Jinu on Discord, it would be great to have her join our dinner as one of the guests of honor.</p>
-  </div>
-
-<div class="guest">
-  <h2>Jinu (Kpop Demon Hunters)</h2>
-  <img src="images/jinu.gif" alt="Animated Jinu GIF">
-  <p>Jinu is another cool character from <em>Kpop Demon Hunters</em>. Ethan and I love these characters and match as them and we relate to them, so having Jinu at the dinner completes the trio and makes the evening even more fun and meaningful.</p>
-</div>
-
-  </div>
-
-<section class="card menu">
-  <h2>Menu</h2>
-  <ul>
-    <li>🍣 <strong>Appetizers:</strong> Crispy rice with sashimi-grade tuna, Cream Cheese Rangoons</li>
-    <hr>
-    <li>🍲 <strong>Main Course:</strong> Korean Rose Tteokbokki (rice cakes in creamy, cheesy, spicy sauce), Korean BBQ short ribs with kimchi on the side</li>
-    <hr>
-    <li>🍨 <strong>Dessert:</strong> Matcha tiramisu, Strawberry bingsu</li>
-    <hr>
-    <li>🥂 <strong>Drinks:</strong> Lychee iced tea, Sparkling yuzu lemonade</li>
-  </ul>
-</section>
-
-  <h2>RSVP</h2>
-  <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-
-    <label>Will you be bringing a guest?</label>
-    <input type="radio" id="yes" name="guest" value="yes">
-    <label for="yes">Yes</label>
-    <input type="radio" id="no" name="guest" value="no">
-    <label for="no">No</label>
-
-    <label for="diet">Dietary Preferences:</label>
-    <textarea id="diet" name="diet"></textarea>
-
-    <br><br>
-    <input type="submit" value="Submit RSVP">
-  </form>
 </body>
 </html>
 
