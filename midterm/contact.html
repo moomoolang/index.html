@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Bali Dream Vacations</title>
+
+  <!-- Fonts (sticking with Playfair & Poppins again for brand consistency) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- maybe add a custom contact form CSS later if needed -->
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <!-- Thinking of swapping this H1 for a small logo later -->
+          <h1>Contact Us</h1>
+        </div>
+        <div class="menu">
+          <a href="index.html">Home</a>
+          <a href="activities.html">Things To Do</a>
+          <a href="dining.html">Places To Eat</a>
+          <a href="statement.html">Design Statement</a>
+          <a href="contact.html" class="active">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main class="container">
+    <h2>Get in Touch</h2>
+    <p style="max-width:600px;">
+      We’d love to hear from you — whether it’s about planning a trip, 
+      getting more info, or just saying hi from across the ocean 🌴
+    </p>
+
+    <!-- Simple form — might switch to a backend script later -->
+    <form>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your full name" required>
+
+      <label for="phone">Phone #</label>
+      <input id="phone" type="tel" placeholder="+62 812 3456 7890">
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="yourname@example.com" required>
+
+      <label for="comments">Comments / Questions</label>
+      <textarea id="comments" rows="5" placeholder="Tell us what you're looking for..."></textarea>
+
+      <!-- Might replace this button with a nicer one from a form library later -->
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      &copy; 2025 Bali Dream Vacations 
+      | <a href="mailto:info@balidreams.com">info@balidreams.com</a>
+      <!-- maybe add map link or WhatsApp later -->
+    </p>
+  </footer>
+</body>
+</html>
