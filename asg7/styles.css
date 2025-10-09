@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #466995;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Main content layout */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Sections */
+section {
+  flex: 2;
+  padding: 1rem;
+}
+
+/* Sidebar */
+aside {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  margin-left: 2rem;
+  border-left: 3px solid #466995;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Headings */
+h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #466995;
+}
+
+/* Links */
+a {
+  color: #466995;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
