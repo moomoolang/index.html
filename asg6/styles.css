@@ -14,6 +14,8 @@ body {
   /* lighter overlay for readability while keeping pattern visible */
   background-color: rgba(255, 255, 255, 0.15);
   scroll-behavior: smooth;
+   /* Blend overlay with the image */
+  background-blend-mode: lighten; /* or try 'overlay' / 'soft-light' for different effects */
 }
 
 /* ====== Headings ====== */
@@ -54,7 +56,7 @@ h2.red-hat::after {
   display: inline-block;
   width: 80px;
   height: 80px;
-  background-image: url('images/red-hat-logo.png'); /* adjust path if needed */
+  background-image: url('../images/red-hat-logo.png'); /* adjust path if needed */
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 0.5rem;
