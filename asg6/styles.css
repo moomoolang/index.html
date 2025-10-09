@@ -11,14 +11,14 @@ body {
   background-repeat: repeat;
   background-size: auto;
 
-  /* Overlay for readability */
-  background-color: rgba(255, 255, 255, 0.05);
+  /* Soft overlay for readability */
+  background-color: rgba(255, 255, 255, 0.15); /* softer than before */
   background-blend-mode: lighten;
 
   scroll-behavior: smooth;
 }
 
-/* ====== Headings ====== */
+/* ====== Global Heading Styles ====== */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Instrument Serif', serif;
   line-height: 1.3;
@@ -29,11 +29,29 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Heading sizes and colors */
 h1 { font-size: 2.2em; color: #045C5A; border-bottom: 3px solid #E76F51; padding-bottom: 0.3rem; }
-h2 { font-size: 1.8em; }
+h2 { font-size: 1.8em; color: #E76F51; }
 h3 { font-size: 1.5em; color: #0A6C67; }
 h4, h5, h6 { font-size: 1.3em; color: #0F8C86; }
 
-/* ====== Paragraph Styling ====== */
+/* ====== H2 Headings ====== */
+h2 {
+  font-size: 1.8em;
+  line-height: 1.3;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  color: #E76F51;       /* default color, you can override per hat */
+  padding-right: 100px; /* space for the image on desktop */
+}
+
+/* ====== Red Hat ===== */
+h2.red-hat {
+  color: #E76F51;
+  background-image: url('images/red-hat-logo.png'); /* make sure the path is correct */
+}
+
+
+/* Paragraph Styling */
 p {
   font-size: 1.05em;
   color: #2a2a2a;
@@ -44,75 +62,23 @@ p {
 
 /* ====== Emoji Decorations Before Headings ====== */
 h1::before { content: "🎩 "; }
-h2.white-hat::before { content: "🤍 "; }
-h2.red-hat::before { content: "❤️ "; }
-h2.black-hat::before { content: "⚫ "; }
-h2.yellow-hat::before { content: "💛 "; }
-h2.green-hat::before { content: "💚 "; }
-h2.blue-hat::before { content: "💙 "; }
+h3::before { content: "⚖️ "; }
+h4::before { content: "🌞 "; }
+h5::before { content: "🌿 "; }
+h6::before { content: "🎼 "; }
 
-/* ====== Hat Images on H2 Headings ====== */
-h2.white-hat, h2.red-hat, h2.black-hat, h2.yellow-hat, h2.green-hat, h2.blue-hat {
-  position: relative;
-  padding-right: 100px; /* space for image on desktop */
-}
 
-h2.white-hat::after,
-h2.red-hat::after,
-h2.black-hat::after,
-h2.yellow-hat::after,
-h2.green-hat::after,
-h2.blue-hat::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 80px;
-  height: 80px;
-  border-radius: 8px;
-  border: 2px solid #E76F51;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
-/* Specific hat images */
-h2.white-hat::after { background-image: url('images/white-hat-logo.png'); border-color: #CCCCCC; }
-h2.red-hat::after { background-image: url('images/red-hat-logo.png'); border-color: #E76F51; }
-h2.black-hat::after { background-image: url('images/black-hat-logo.png'); border-color: #2A2A2A; }
-h2.yellow-hat::after { background-image: url('images/yellow-hat-logo.png'); border-color: #FFD700; }
-h2.green-hat::after { background-image: url('images/green-hat-logo.png'); border-color: #2AA876; }
-h2.blue-hat::after { background-image: url('images/blue-hat-logo.png'); border-color: #1E90FF; }
 
-/* ====== Main Container ====== */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.85);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* ====== Responsive Styling ====== */
+/* ====== Responsive ====== */
 @media (max-width: 768px) {
   body { padding: 1rem; }
 
   h1 { font-size: 1.8em; }
   p { font-size: 1em; }
 
-  h2.white-hat, h2.red-hat, h2.black-hat, h2.yellow-hat, h2.green-hat, h2.blue-hat {
-    padding-right: 0;
-    text-align: center;
-  }
-
-  h2.white-hat::after, h2.red-hat::after, h2.black-hat::after,
-  h2.yellow-hat::after, h2.green-hat::after, h2.blue-hat::after {
-    position: static;
+  h2.red-hat::after {
     display: block;
     margin: 0.5rem auto 1rem auto;
-    transform: none;
   }
 }
