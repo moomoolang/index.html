@@ -6,13 +6,13 @@ body {
   color: #2a2a2a;
   line-height: 1.7;
 
-  /* Watercolor pattern background */
+  /* Watercolor background */
   background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png');
   background-repeat: repeat;
   background-size: auto;
 
- /* Softer overlay — lower opacity to let pattern show more */
-  background-color: rgba(255, 255, 255, 0.05); /* very subtle white overlay */
+  /* Soft overlay for readability */
+  background-color: rgba(255, 255, 255, 0.05); /* almost transparent for strong watercolor visibility */
   background-blend-mode: lighten;
 
   scroll-behavior: smooth;
@@ -27,11 +27,13 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-/* Heading sizes and colors */
-h1 { font-size: 2.2em; color: #045C5A; border-bottom: 3px solid #E76F51; padding-bottom: 0.3rem; }
-h2 { font-size: 1.8em; }
-h3 { font-size: 1.5em; color: #0A6C67; }
-h4, h5, h6 { font-size: 1.3em; color: #0F8C86; }
+/* ====== Emoji Decorations ===== */
+h1::before { content: "🎩 "; }
+h2::before { content: "💭 "; }
+h3::before { content: "⚖️ "; }
+h4::before { content: "🌞 "; }
+h5::before { content: "🌿 "; }
+h6::before { content: "🎼 "; }
 
 /* ====== Paragraph Styling ====== */
 p {
@@ -42,98 +44,66 @@ p {
   margin-bottom: 1.2rem;
 }
 
-/* ====== Emoji Decorations ===== */
-h1::before { content: "🎩 "; }
-h2::before { content: "💭 "; }
-h3::before { content: "⚖️ "; }
-h4::before { content: "🌞 "; }
-h5::before { content: "🌿 "; }
-h6::before { content: "🎼 "; }
+/* ====== H2 Bubble + Hat Logos ===== */
+h2 {
+  display: block;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px 20px 0 0;
+  padding: 1.5rem 2rem 1rem 2rem;
+  margin: 2rem 0 0 0;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-size: 1.8em;
 
-/* ====== H2 Headings with Background Images (Hat Logos) ===== */
-h2.white-hat {
-  color: #045C5A;
+  /* default padding for hat logo space */
   padding-left: 100px;
-  background-image: url('images/white-hat-logo.png');
   background-repeat: no-repeat;
   background-size: 80px 80px;
   background-position: left center;
 }
 
-h2.red-hat {
-  color: #E76F51;
-  padding-left: 100px;
-  background-image: url('images/red-hat-logo.png');
-  background-repeat: no-repeat;
-  background-size: 80px 80px;
-  background-position: left center;
+/* Bubble for the paragraph immediately after h2 */
+h2 + p {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0 0 20px 20px;
+  padding: 1rem 2rem 1.5rem 2rem;
+  margin: 0 0 2rem 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-h2.black-hat {
-  color: #2A2A2A;
-  padding-left: 100px;
-  background-image: url('images/black-hat-logo.png');
-  background-repeat: no-repeat;
-  background-size: 80px 80px;
-  background-position: left center;
-}
+/* ====== Hat Logo Classes ===== */
+h2.white-hat { background-image: url('images/white-hat-logo.png'); color: #045C5A; }
+h2.red-hat { background-image: url('images/red-hat-logo.png'); color: #E76F51; }
+h2.black-hat { background-image: url('images/black-hat-logo.png'); color: #2A2A2A; }
+h2.yellow-hat { background-image: url('images/yellow-hat-logo.png'); color: #FFD700; }
+h2.green-hat { background-image: url('images/green-hat-logo.png'); color: #2AA876; }
+h2.blue-hat { background-image: url('images/blue-hat-logo.png'); color: #1E90FF; }
 
-h2.yellow-hat {
-  color: #FFD700;
-  padding-left: 100px;
-  background-image: url('images/yellow-hat-logo.png');
-  background-repeat: no-repeat;
-  background-size: 80px 80px;
-  background-position: left center;
-}
-
-h2.green-hat {
-  color: #2AA876;
-  padding-left: 100px;
-  background-image: url('images/green-hat-logo.png');
-  background-repeat: no-repeat;
-  background-size: 80px 80px;
-  background-position: left center;
-}
-
-h2.blue-hat {
-  color: #1E90FF;
-  padding-left: 100px;
-  background-image: url('images/blue-hat-logo.png');
-  background-repeat: no-repeat;
-  background-size: 80px 80px;
-  background-position: left center;
-}
-
-/* ====== Main Container ====== */
+/* ====== Main Container (optional for spacing) ===== */
 main {
   max-width: 900px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 2rem 0;
 }
 
-/* ====== Responsive Design ====== */
+/* ====== Responsive Design ===== */
 @media (max-width: 768px) {
   body { padding: 1rem; }
 
   h1 { font-size: 1.8em; }
   p { font-size: 1em; }
 
-  /* Move hat logos above text on mobile */
-  h2.white-hat,
-  h2.red-hat,
-  h2.black-hat,
-  h2.yellow-hat,
-  h2.green-hat,
-  h2.blue-hat {
-    padding-left: 0;
+  h2 {
+    padding-left: 2rem;
     background-position: top center;
     background-size: 60px 60px;
     text-align: center;
-    margin-bottom: 1rem;
+    border-radius: 20px 20px 0 0;
+  }
+
+  h2 + p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 0 0 20px 20px;
   }
 }
-
