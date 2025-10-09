@@ -1,0 +1,148 @@
+
+
+/* ====== Base Layout and Background ====== */
+html {
+  /* background pattern from Subtle Patterns or Colourlovers */
+  background:html {
+  background: url('https://static.colourlovers.com/images/patterns/6041/6041720.png') repeat;
+  background-size: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  margin: 0;
+  padding: 2rem 10%;
+  color: #2a2a2a;
+  background-color: rgba(255, 255, 255, 0.9); /* light overlay for readability */
+  line-height: 1.7;
+}
+
+/* ====== Color Palette ======
+   - Deep Teal (#045C5A) for headings
+   - Coral (#E76F51) for accent highlights
+   - Warm Sand (#F4E1C1) background tone
+   - Dark Gray (#2A2A2A) for paragraph text
+*/
+
+/* ====== Global Heading Styles ====== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Instrument Serif', serif;
+  color: #045C5A;
+  line-height: 1.3;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ====== Heading Hierarchy ====== */
+h1 {
+  font-size: 2.2em;
+  border-bottom: 3px solid #E76F51;
+  padding-bottom: 0.3rem;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #0B7C78;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #0A6C67;
+}
+
+h4, h5, h6 {
+  font-size: 1.3em;
+  color: #0F8C86;
+}
+
+/* ====== Paragraph Styling ====== */
+p {
+  font-size: 1.05em;
+  color: #2a2a2a;
+  line-height: 1.8;  /* improves readability */
+  text-align: justify;
+  margin-bottom: 1.2rem;
+}
+
+/* ====== Hat Image (floated to the right) ====== */
+.hat-image {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  border-radius: 12px;
+  width: 180px;
+  height: auto;
+  border: 2px solid #E76F51;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Example usage in your HTML:
+   <img src="images/green-hat.png" alt="Green Hat" class="hat-image">
+   Place this image inside the paragraph for your dominant thinking hat section.
+*/
+
+/* ====== Section-Specific Styling ====== */
+h1::before {
+  content: "🎩 ";
+}
+
+h2::before {
+  content: "💭 ";
+}
+
+h3::before {
+  content: "⚖️ ";
+}
+
+h4::before {
+  content: "🌞 ";
+}
+
+h5::before {
+  content: "🌿 ";
+}
+
+h6::before {
+  content: "🎼 ";
+}
+
+/* ====== Page Container and Alignment ====== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ====== Responsive Typography ====== */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .hat-image {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+/* ====== Footer (Optional, if you add one) ====== */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #E76F51;
+}
