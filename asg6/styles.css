@@ -1,26 +1,28 @@
-
-
-html {
-  background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png');
-  background-repeat: repeat;
-  background-size: auto;
-  scroll-behavior: smooth;
-}
-
+/* ====== Base Layout and Background ====== */
 body {
   font-family: 'Urbanist', sans-serif;
   margin: 0;
   padding: 2rem 10%;
   color: #2a2a2a;
-  background-color: rgba(255, 255, 255, 0.9); /* light overlay for readability */
   line-height: 1.7;
+
+  /* --- Watercolor pattern from Subtle Patterns --- */
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png');
+  background-repeat: repeat;
+  background-size: auto;
+
+  /* Light overlay for readability — transparent enough for pattern to show */
+background-color: rgba(255, 255, 255, 0.88);
+  background-blend-mode: lighten;
+
+  scroll-behavior: smooth;
 }
 
 /* ====== Color Palette ======
-   - Deep Teal (#045C5A) for headings
-   - Coral (#E76F51) for accent highlights
-   - Warm Sand (#F4E1C1) background tone
-   - Dark Gray (#2A2A2A) for paragraph text
+   Deep Teal (#045C5A) – main headings
+   Coral (#E76F51) – accent highlights
+   Warm Sand (#F4E1C1) – background tone
+   Dark Gray (#2A2A2A) – paragraph text
 */
 
 /* ====== Global Heading Styles ====== */
@@ -76,7 +78,6 @@ p {
 
 /* Example usage in your HTML:
    <img src="images/green-hat.png" alt="Green Hat" class="hat-image">
-   Place this image inside the paragraph for your dominant thinking hat section.
 */
 
 /* ====== Section-Specific Styling ====== */
@@ -108,7 +109,7 @@ h6::before {
 main {
   max-width: 900px;
   margin: 0 auto;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
