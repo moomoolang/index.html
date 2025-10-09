@@ -3,13 +3,18 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
+  color: #222;
   background-color: #f4f4f4;
-  color: #333;
+
+  /* Add subtle pattern from Hero Patterns (SVG) */
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/watercolor.png");
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 /* Header */
 header {
-  background-color: #466995;
+  background-color: #1F3B4D;
   color: #fff;
   padding: 2rem;
   text-align: center;
@@ -23,8 +28,9 @@ main {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 1rem;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.95); /* slight transparency to show pattern */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
 /* Sections */
@@ -37,9 +43,10 @@ section {
 aside {
   flex: 1;
   padding: 1rem;
-  background-color: #f0f0f0;
+  background-color: #F0F8FF;
   margin-left: 2rem;
-  border-left: 3px solid #466995;
+  border-left: 4px solid #4ECDC4;
+  border-radius: 8px;
 }
 
 /* Images */
@@ -48,20 +55,22 @@ img {
   height: auto;
   display: block;
   margin-bottom: 1rem;
+  border-radius: 6px;
 }
 
 /* Headings */
 h2 {
   font-family: 'Oswald', sans-serif;
-  color: #466995;
+  color: #4ECDC4;
 }
 
 /* Links */
 a {
-  color: #466995;
+  color: #FF6B6B;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
 }
+
