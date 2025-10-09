@@ -6,25 +6,26 @@ body {
   color: #2a2a2a;
   line-height: 1.7;
 
+  /* Watercolor pattern */
   background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png');
   background-repeat: repeat;
   background-size: auto;
 
-  /* lighter overlay for readability without hiding pattern */
-  background-color: rgba(255, 255, 255, 0.3);
+  /* lighter overlay for readability while keeping pattern visible */
+  background-color: rgba(255, 255, 255, 0.15);
   scroll-behavior: smooth;
 }
 
-/* ====== Global Heading Styles ====== */
+/* ====== Headings ====== */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Instrument Serif', serif;
   line-height: 1.3;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  position: relative; /* needed for pseudo-elements */
+  position: relative;
 }
 
-/* Heading Colors and Sizes */
+/* Heading colors and sizes */
 h1 { font-size: 2.2em; color: #045C5A; border-bottom: 3px solid #E76F51; padding-bottom: 0.3rem; }
 h2 { font-size: 1.8em; color: #E76F51; }
 h3 { font-size: 1.5em; color: #0A6C67; }
@@ -39,7 +40,7 @@ p {
   margin-bottom: 1.2rem;
 }
 
-/* ====== Section Emoji Decorations ====== */
+/* ====== Emoji Decorations ====== */
 h1::before { content: "🎩 "; }
 h2::before { content: "💭 "; }
 h3::before { content: "⚖️ "; }
@@ -47,95 +48,19 @@ h4::before { content: "🌞 "; }
 h5::before { content: "🌿 "; }
 h6::before { content: "🎼 "; }
 
-/* ====== Hat Images Next to Headings ====== */
-/* Use pseudo-elements instead of <img> tags */
+/* ====== Red Hat Image for H2 ====== */
 h2.red-hat::after {
   content: "";
   display: inline-block;
   width: 80px;
   height: 80px;
-  background-image: url('images/red-hat-logo.png');
+  background-image: url('images/red-hat-logo.png'); /* adjust path if needed */
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 0.5rem;
   vertical-align: middle;
   border-radius: 8px;
   border: 2px solid #E76F51;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-}
-
-h2.green-hat::after {
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  background-image: url('images/green-hat-logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-  border-radius: 8px;
-  border: 2px solid #2AA876;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-}
-
-h2.yellow-hat::after {
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  background-image: url('images/yellow-hat-logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-  border-radius: 8px;
-  border: 2px solid #FFD700;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-}
-
-h2.blue-hat::after {
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  background-image: url('images/blue-hat-logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-  border-radius: 8px;
-  border: 2px solid #1E90FF;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-}
-
-h2.white-hat::after {
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  background-image: url('images/white-hat-logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-  border-radius: 8px;
-  border: 2px solid #CCCCCC;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-}
-
-h2.black-hat::after {
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  background-image: url('images/black-hat-logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-  border-radius: 8px;
-  border: 2px solid #2A2A2A;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
 
@@ -149,25 +74,19 @@ main {
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* ====== Responsive Typography and Images ====== */
+/* ====== Responsive Styling ====== */
 @media (max-width: 768px) {
   body { padding: 1rem; }
-
   h1 { font-size: 1.8em; }
   p { font-size: 1em; }
 
-  h2.red-hat::after,
-  h2.green-hat::after,
-  h2.yellow-hat::after,
-  h2.blue-hat::after,
-  h2.white-hat::after,
-  h2.black-hat::after {
+  h2.red-hat::after {
     display: block;
     margin: 0.5rem auto 1rem auto;
   }
 }
 
-/* ====== Footer Styling ====== */
+/* ====== Footer ====== */
 footer {
   text-align: center;
   font-size: 0.9em;
@@ -176,4 +95,3 @@ footer {
   padding-top: 1rem;
   border-top: 2px solid #E76F51;
 }
-
