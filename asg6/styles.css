@@ -6,26 +6,32 @@ body {
   color: #2a2a2a;
   line-height: 1.7;
 
-  /* Watercolor background */
   background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png');
   background-repeat: repeat;
   background-size: auto;
-
-  /* Soft overlay for readability */
-  background-color: rgba(255, 255, 255, 0.05); /* almost transparent for strong watercolor visibility */
+  background-color: rgba(255, 255, 255, 0.05); /* subtle overlay */
   background-blend-mode: lighten;
 
   scroll-behavior: smooth;
 }
 
-/* ====== Global Headings ====== */
+/* ====== Headings ====== */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Instrument Serif', serif;
+  font-weight: 700; /* make headings bold */
   line-height: 1.3;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
   position: relative;
 }
+
+/* Make all headings bigger so later ones aren't too small */
+h1 { font-size: 2.2em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.2em; }
 
 /* ====== Emoji Decorations ===== */
 h1::before { content: "🎩 "; }
@@ -53,9 +59,10 @@ h2 {
   margin: 2rem 0 0 0;
   position: relative;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  font-size: 1.8em;
+  font-weight: 700;
+  line-height: 1.3;
 
-  /* default padding for hat logo space */
+  /* space for hat logo */
   padding-left: 100px;
   background-repeat: no-repeat;
   background-size: 80px 80px;
@@ -79,7 +86,16 @@ h2.yellow-hat { background-image: url('images/yellow-hat-logo.png'); color: #FFD
 h2.green-hat { background-image: url('images/green-hat-logo.png'); color: #2AA876; }
 h2.blue-hat { background-image: url('images/blue-hat-logo.png'); color: #1E90FF; }
 
-/* ====== Main Container (optional for spacing) ===== */
+/* ====== Optional: make other headings h3+ also bubble-style ===== */
+h3, h4, h5, h6 {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ====== Main Container ===== */
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -91,19 +107,9 @@ main {
   body { padding: 1rem; }
 
   h1 { font-size: 1.8em; }
+  h2 { font-size: 1.6em; padding-left: 2rem; background-position: top center; background-size: 60px 60px; text-align: center; border-radius: 20px 20px 0 0; }
+  h2 + p { padding-left: 2rem; padding-right: 2rem; border-radius: 0 0 20px 20px; }
+  h3, h4, h5, h6 { font-size: 1.1em; padding: 0.8rem 1rem; }
   p { font-size: 1em; }
-
-  h2 {
-    padding-left: 2rem;
-    background-position: top center;
-    background-size: 60px 60px;
-    text-align: center;
-    border-radius: 20px 20px 0 0;
-  }
-
-  h2 + p {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-radius: 0 0 20px 20px;
-  }
 }
+
