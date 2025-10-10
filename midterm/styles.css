@@ -350,5 +350,14 @@ input:focus, textarea:focus {
     width: 100%;
   }
 
+  .statement img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+
   /* maybe stack footer differently later */
 }
