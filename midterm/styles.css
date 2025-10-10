@@ -278,6 +278,10 @@ footer {
   /* note: might add box-shadow if time allows */
 }
 
+.restaurant h3{
+  color:#0f6b63;
+}
+
 .activity p {
 color:black;
 }
