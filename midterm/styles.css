@@ -75,8 +75,7 @@
 
 .highlight-image 
 {
-  background-image: url (images/water-image.jpg);
-  background: #0f6b63;
+  background-image: url("images/water-image.jpg");
   border: 1px solid #000000;
   border-radius: 10px;
   padding: 1rem;
