@@ -352,7 +352,7 @@ input:focus, textarea:focus {
 
   .statement img{
   max-width: 100%;
-  height: auto;
+  object-fit: cover;
   display: block;
   margin-bottom: 1rem;
   border-radius: 6px;
