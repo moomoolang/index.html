@@ -33,7 +33,7 @@
 
 
 body {
-  font-family:'Afacad Flux';
+  font-family:'Afacad Flux', sans-serif;
   margin: 0;
   padding: 0;
   color: #222;
@@ -106,6 +106,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 
 
 
