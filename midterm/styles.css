@@ -72,6 +72,7 @@
   background-color: rgba(255, 255, 255, 0.70); /* White with 70% opacity */
   z-index: 9999; /* Ensures the overlay is on top of other elements */
   display: none;
+  
 }
 #overylay.active {
   display: block;
@@ -80,6 +81,9 @@
 /*Highlights*/
 
 .highlights{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5 rem;
   margin-bottom:2rem;
 }
 
