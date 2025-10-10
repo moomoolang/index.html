@@ -73,9 +73,9 @@
   z-index: 9999; /* Ensures the overlay is on top of other elements */
   display: none;
 }
-#overylay.active }
+#overylay.active {
   display: block;
-{
+}
 
 /*Highlights*/
 .highlight-image 
