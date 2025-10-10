@@ -81,6 +81,7 @@
 /*Highlights*/
 
 .highlights{
+  background-color:#ff7b6a; 
   display: flex;
   flex-direction: column;
   gap: 1.5 rem;
