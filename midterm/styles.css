@@ -84,8 +84,13 @@
   overflow: hidden;
 }
 
+h2 {
+  color: black;
+}
 
-
+p {
+ color: white;
+}
 .highlight-image img{
   max-width: 330px;
   border-radius: 10px;
