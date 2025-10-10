@@ -78,6 +78,11 @@
 }
 
 /*Highlights*/
+
+.highlights{
+  margin-bottom:2rem;
+}
+
 .highlight-image 
 {
    background: #FFFFFF;
