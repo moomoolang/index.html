@@ -63,6 +63,25 @@
   box-sizing: border-box;
 }
 
+/*Highlights*/
+.highlight-image 
+{
+   background: #fdf6fa;
+  border: 1px solid #f0d5e4;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.highlight-image img{
+  max-width: 160px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
