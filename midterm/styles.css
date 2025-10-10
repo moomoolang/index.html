@@ -103,7 +103,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   line-height: 1.6; /* changed slightly — feels better to read */
-  background: #fff;
+  background: #F5F5F5;
   color: #222;
   /* note to self: consider adding subtle texture background later */
 }
