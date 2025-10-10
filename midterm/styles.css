@@ -274,6 +274,9 @@ footer {
   /* note: might add box-shadow if time allows */
 }
 
+.activity.p {
+color:black;
+}
 /* ------------------- FORMS ------------------- */
 
 form {
