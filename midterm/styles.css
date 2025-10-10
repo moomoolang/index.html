@@ -79,7 +79,7 @@
   background: url("images/water-abstract-light-blue.jpg");
   background-size: cover;
   background-position: center;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -91,7 +91,7 @@
  content:'';
  position:absolute;
  top: 0; left: 0; right: 0; bottom: 0;
- background: rgba(255,255,255,0.2); /* black with 30% */
+ background: rgba(0,0,0,0.3); /* black with 30% */
  z-index: 1;
 }
 
@@ -100,12 +100,11 @@
   z-index: 2;
 }
 
-.highlight-image.h2{
-  color: black;
-}
-
-.highlight-image.p{
- color: white;
+.highlight-image.h2, 
+.highlight-image p {
+  position: relative;
+  z-index: 2;
+  color: white;
 }
 .highlight-image img{
   max-width: 330px;
