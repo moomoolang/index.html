@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-  background-color: #1F3B4D;
+  background-color: #FFF;
   color: #fff;
   padding: 2rem;
   text-align: center;
@@ -73,5 +73,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 
 
