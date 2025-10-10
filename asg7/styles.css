@@ -15,7 +15,7 @@ body {
 /* Header */
 header {
   background-color: #ADD8E6;
-  color: #FFFFFF
+  color: #FFFFFF;
   padding: 2rem;
   text-align: center;
   font-family: 'Oswald', sans-serif;
@@ -73,6 +73,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 
 
 
