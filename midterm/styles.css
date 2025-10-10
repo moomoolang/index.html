@@ -196,11 +196,11 @@ nav {
   margin-bottom: 1.2rem;
 }
 
-.card.intro.p{
+.card.intro p{
   color:#141414;
 }
 
-.restaurant.p{
+.restaurant p{
 color: black;
 }
 
@@ -278,7 +278,7 @@ footer {
   /* note: might add box-shadow if time allows */
 }
 
-.activity.p {
+.activity p {
 color:black;
 }
 /* ------------------- FORMS ------------------- */
