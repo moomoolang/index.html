@@ -71,7 +71,7 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
   z-index: 9999; /* Ensures the overlay is on top of other elements */
-  display: none; /* Hidden by default; controlled by JavaScript */
+  display: block;
 }
 
 /*Highlights*/
