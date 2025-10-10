@@ -227,16 +227,7 @@ nav {
 color: black;
 }
 
-.container img {
-  max-width: 1200px;
-  margin: 0 auto 1 rem auto;
-  padding: 1rem;
-  display: block;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-  box-sizing: border-box;
-  overlow: hidden;
-}
+
 
   
 
