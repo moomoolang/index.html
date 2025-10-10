@@ -76,7 +76,6 @@
 .highlight-image 
 {
   position: relative;
-  background:
   background: url("images/water-image.jpg") center/ cover no-repeat;
   backround-size: cover;
   background-position: center;
