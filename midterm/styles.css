@@ -84,11 +84,12 @@
   overflow: hidden;
 }
 
-h2 {
+
+.highlight-image h2{
   color: black;
 }
 
-p {
+.highlight-image p{
  color: white;
 }
 .highlight-image img{
@@ -204,7 +205,7 @@ nav {
   margin-bottom: 1.2rem;
 }
 
-.card intro.p{
+.card.intro p{
   color: black;
 }
 
