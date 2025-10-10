@@ -81,7 +81,6 @@
 /*Highlights*/
 
 .highlights{
-  background-color:#ff7b6a; 
   display: flex;
   flex-direction: column;
   gap: 1.5 rem;
@@ -90,7 +89,7 @@
 
 .highlight-image 
 {
-   background: #FFFFFF;
+  background:#ff7b6a; 
   border: 1px solid #0f6b63;
   border-radius: 10px;
   padding: 1rem;
