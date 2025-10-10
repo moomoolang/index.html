@@ -351,12 +351,12 @@ input:focus, textarea:focus {
   }
 
   .statement img{
-  width: 200px;
+  width: 150px;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-  margin: 0 auto 1 rem;
+  margin: 0 auto;
 
 }
 
