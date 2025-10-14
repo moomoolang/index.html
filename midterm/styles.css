@@ -326,6 +326,10 @@ color:black;
   padding: 5px;
 }
 
+.column image {
+ width: 320px;
+}
+
 .container img{
   border-radius: 10px;
   object-fit: cover;
