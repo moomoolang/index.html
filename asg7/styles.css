@@ -1,22 +1,52 @@
 /* -------------------------
    Base / layout
    ------------------------- */
+
 :root{
   --max-column-width: 1200px;
   --accent:#2c3e50;
   --muted:#777;
   --bg-overlay: rgba(255,255,255,0.9);
 }
+ font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/afacad-flux-v4-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* afacad-flux-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts/afacad-flux-v4-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
 
 /* simple reset */
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: #222;
-  line-height:1.5;
-  background-color:#f4f6f8;
+
+h1, h2, h3 {
+	color: #2c3e50;
 }
+
+body {
+  font-family:'Afacad Flux', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: #f4f4f4;
+
+ /* Add subtle pattern from Hero Patterns (SVG) */
+  background-image: url("images/abstract-light-blue.jpg") center/ cover no-repeat"
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+
 
 /* page-level background (scoped by body class so other pages unaffected) */
 .wireframes-page{
@@ -128,6 +158,7 @@ body{
   .container{ margin: 18px; padding: 16px; }
   .wireframe-placeholder{ aspect-ratio: 4 / 3; }
 }
+
 
 
 
