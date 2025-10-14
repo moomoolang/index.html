@@ -143,7 +143,7 @@ h1, h2, h3 {
 }
 
 .wireframe-category h4 {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	color: #34495e;
 }
 
@@ -177,6 +177,7 @@ h1, h2, h3 {
   object-fit: contain;
   border-radius: 10px;
 }
+
 
 
 
