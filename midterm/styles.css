@@ -227,7 +227,17 @@ nav {
 color: black;
 }
 
-
+  .statement img{
+  width: 320px;
+  height: 320px;
+  border-radius: 75%x;
+  border: 1px solid #eee;
+  border-radius: 75%x;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.2rem;
+  object-fit: cover;
+   padding:0%;
+}
 
   
 
@@ -350,17 +360,7 @@ input:focus, textarea:focus {
     width: 100%;
   }
 
-  .statement img{
-  width: 320px;
-  height: 320px;
-  border-radius: 75%x;
-  border: 1px solid #eee;
-  border-radius: 75%x;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1.2rem;
-  object-fit: cover;
-   padding:0%;
-}
+
 
 
   /* maybe stack footer differently later */
