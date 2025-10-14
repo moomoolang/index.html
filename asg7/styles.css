@@ -1,183 +1,132 @@
-/* General Styles */
-/* oswald-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/oswald-v57-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* oswald-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: url('fonts/oswald-v57-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Afacad Flux';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/afacad-flux-v4-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* afacad-flux-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Afacad Flux';
-  font-style: normal;
-  font-weight: 900;
-  src: url('fonts/afacad-flux-v4-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+/* -------------------------
+   Base / layout
+   ------------------------- */
+:root{
+  --max-column-width: 1200px;
+  --accent:#2c3e50;
+  --muted:#777;
+  --bg-overlay: rgba(255,255,255,0.9);
 }
 
-
-body {
-  font-family:'Afacad Flux', sans-serif;
-  margin: 0;
-  padding: 0;
+/* simple reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: #222;
-  background-color: #f4f4f4;
-
-  /* Add subtle pattern from Hero Patterns (SVG) */
-  background-image: url("images/abstract-light-blue.jpg") center/ cover no-repeat"
-  background-repeat: repeat;
-  background-size: auto;
+  line-height:1.5;
+  background-color:#f4f6f8;
 }
 
-/* Header */
-header {
-  background-color: #ADD8E6;
-  color: #FFFFFF;
-  padding: 2rem;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
+/* page-level background (scoped by body class so other pages unaffected) */
+.wireframes-page{
+  background-image: url("images/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* Main content layout */
-main {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.95); /* slight transparency to show pattern */
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+/* content container to keep readable width */
+.container{
+  max-width: var(--max-column-width);
+  margin: 40px auto;
+  padding: 28px;
+  background: var(--bg-overlay);
   border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-/* Sections */
-section {
-  flex: 2;
-  padding: 1rem;
+/* -------------------------
+   Headings (explicit sizes)
+   ------------------------- */
+h1{
+  color: var(--accent);
+  font-size: 34px;           /* large */
+  margin-bottom: 12px;
+  line-height:1.15;
 }
 
-/* Sidebar */
-aside {
-  flex: 1;
-  padding: 1rem;
-  background-color: #F0F8FF;
-  margin-left: 2rem;
-  border-left: 4px solid #4ECDC4;
-  border-radius: 8px;
+h2.section-title{             /* wireframes section title */
+  font-size: 32px;           /* big, as requested */
+  color: var(--accent);
+  margin: 28px 0 8px;
 }
 
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 1rem;
-  border-radius: 6px;
+.summary h2{                  /* the other h2s in the page */
+  font-size: 28px;           /* slightly smaller but still prominent */
+  color: var(--accent);
+  margin-top: 20px;
 }
 
-/* Headings */
-h2 {
-  font-family: 'Oswald', sans-serif;
-  color: #4ECDC4;
+h3{
+  font-size: 20px;
+  color:#34495e;
+  margin-top: 10px;
 }
 
-/* Links */
-a {
-  color: #FF6B6B;
-  text-decoration: none;
+h4{
+  font-size: 22px;           /* medium / big as you asked */
+  color:#34495e;
+  margin: 12px 0;
+  font-weight:600;
+  text-transform: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+/* paragraph niceties */
+.lead{ font-size: 16px; color:#333; margin-bottom: 16px; }
+.section-desc{ font-size:14px; color:var(--muted); margin-bottom:18px; }
 
-p {
-  font-family:'Afacad Flux', sans-serif;
-}
-
-
-.wireframes-page {
-	background-image: url("images/background-image.jpg")
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-
-h1, h2, h3 {
-	color: #2c3e50;
-}
-
-/* Wireframe section styles */
-.wireframes {
-	margin-top: 50px;
-	padding: 20px;
-	background-color: rgba(255, 255, 255, 0.8);
-	border-radius: 10px;
-}
-
-/* Wireframe section */
-.wireframes {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
+/* -------------------------
+   Wireframes grid + boxes
+   ------------------------- */
+.wireframes{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  align-items: start;
+  margin-top: 8px;
 }
 
-.wireframe-category h4 {
-	margin-bottom: 10px;
-	color: #34495e;
-}
-
-/* Individual wireframe boxes */
-.wireframe-category {
+/* each category contains title + placeholder */
+.wireframe-category{
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 10px;
 }
 
-/* Wireframe image box */
-.wireframe-placeholder {
+/* the box that contains the image (keeps consistent aspect ratio) */
+.wireframe-placeholder{
   width: 100%;
-  max-width: 600px;
-  border: 2px dashed #aaa;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;          /* keeps boxes consistent without forcing distortion */
+  border: 2px dashed #cfcfcf;
+  border-radius: 8px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #777;
-  font-size: 16px;
-  overflow: hidden;
-}
-/* Make wireframe images scale naturally */
-.wireframe-placeholder img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
 
+/* IMAGE rules: prevent stretching and maintain proportional scaling */
+.wireframe-placeholder img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     /* show full image centered, no cropping */
+  display: block;
+}
+
+/* small-screen tweaks */
+@media (max-width:640px){
+  h1{ font-size: 26px; }
+  h2.section-title{ font-size: 24px; }
+  h4{ font-size: 18px; }
+  .container{ margin: 18px; padding: 16px; }
+  .wireframe-placeholder{ aspect-ratio: 4 / 3; }
+}
 
 
 
