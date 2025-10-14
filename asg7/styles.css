@@ -112,6 +112,47 @@ p {
 }
 
 
+.wireframes-page {
+	background-image: url("images/background-image.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+h1, h2, h3 {
+	color: #2c3e50;
+}
+
+/* Wireframe section styles */
+.wireframes {
+	margin-top: 50px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+}
+
+.wireframe-category {
+	margin-bottom: 40px;
+}
+
+.wireframe-category h4 {
+	margin-bottom: 10px;
+	color: #34495e;
+}
+
+.wireframe-placeholder {
+	width: 100%;
+	max-width: 600px;
+	height: 350px;
+	border: 2px dashed #aaa;
+	border-radius: 10px;
+	background-color: #f9f9f9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #777;
+	font-size: 16px;
+}
 
 
 
