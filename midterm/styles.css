@@ -352,11 +352,14 @@ input:focus, textarea:focus {
 
   .statement img{
   width: 320px;
- padding: 1.1rem 1.6rem;
+  height: 320px;
+  border-radius: 75%x;
   border: 1px solid #eee;
-  border-radius: 10px;
+  border-radius: 75%x;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   margin-bottom: 1.2rem;
+  object-fit: cover;
+   padding:0%;
 }
 
 
