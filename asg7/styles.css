@@ -141,17 +141,26 @@ h1, h2, h3 {
 }
 
 .wireframe-placeholder {
-	width: 100%;
-	max-width: 600px;
-	height: 350px;
-	border: 2px dashed #aaa;
-	border-radius: 10px;
-	background-color: #f9f9f9;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #777;
-	font-size: 16px;
+  width: 100%;
+  max-width: 600px;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 16px;
+  overflow: hidden; /* keeps edges clean if the image is slightly larger */
+}
+
+/* Make wireframe images scale naturally */
+.wireframe-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 
