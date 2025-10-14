@@ -22,7 +22,67 @@
   font-weight: 900;
   src: url('fonts/afacad-flux-v4-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* Header */
+header {
+  background-color: #ADD8E6;
+  color: #FFFFFF;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
 
+/* Main content layout */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.95); /* slight transparency to show pattern */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Sections */
+section {
+  flex: 2;
+  padding: 1rem;
+}
+
+/* Sidebar */
+aside {
+  flex: 1;
+  padding: 1rem;
+  background-color: #F0F8FF;
+  margin-left: 2rem;
+  border-left: 4px solid #4ECDC4;
+  border-radius: 8px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+/* Headings */
+h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #4ECDC4;
+}
+
+/* Links */
+a {
+  color: #FF6B6B;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 
 /* simple reset */
@@ -158,6 +218,7 @@ body {
   .container{ margin: 18px; padding: 16px; }
   .wireframe-placeholder{ aspect-ratio: 4 / 3; }
 }
+
 
 
 
