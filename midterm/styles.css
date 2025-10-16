@@ -360,22 +360,39 @@ input:focus, textarea:focus {
 /* ------------------- RESPONSIVE ------------------- */
 
 @media (max-width: 800px) {
+
   nav {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .hero img {
-    height: 260px; /* slightly taller for visual balance */
+    height: auto;       /* maintain aspect ratio */
+    width: 100%;        /* full width for mobile */
   }
 
-  .activity img, 
+  .activity img,
   .restaurant img {
-    width: 100%;
+    width: 100%;        /* full width on mobile */
+    height: auto;
   }
 
+  .statement img {
+    width: 80%;         /* responsive width */
+    max-width: 320px;   /* don’t get too big */
+    aspect-ratio: 1 / 1; /* keeps image square for circular shape */
+    border-radius: 50%; /* makes it circular */
+    object-fit: cover;  /* crop image to fit square */
+    border: 1px solid #eee;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    margin: 1rem auto;  /* center and spacing */
+    display: block;     /* removes inline spacing issues */
+    padding: 0;         /* remove padding from image */
+  }
 
+  /* optional: stack footer differently for small screens */
+  footer {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
 
-
-  /* maybe stack footer differently later */
-}
