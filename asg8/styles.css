@@ -1,0 +1,100 @@
+/* 
+      .--..--..--..--..--..--.
+    .' \  (`._   (_)     _   \
+  .'    |  '._)         (_)  |
+  \ _.')\      .----..---.   /
+  |(_.'  |    /    .-\-.  \  |
+  \     0|    |   ( O| O) | o|
+   |  _  |  .--.____.'._.-.  |
+   \ (_) | o         -` .-`  |
+    |    \   |`-._ _ _ _ _\ /
+    \    |   |  `. |_||_|   |
+    | o  |    \_      \     |     -.   .-.
+    |.-.  \     `--..-'   O |     `.`-' .'
+  _.'  .' |     `-.-'      /-.__   ' .-'
+.' `-.` '.|='=.='=.='=.='=|._/_ `-'.'
+`-._  `.  |________/\_____|    `-.'
+   .'   ).| '=' '='\/ '=' |
+   `._.`  '---------------'
+           //___\   //___\
+             ||       ||
+             ||_.-.   ||_.-.
+            (_.--__) (_.--__)
+       
+
+ Insert all your glorious CSS styles below! */
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/montserrat-v31-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* bbh-sans-bogle-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'BBH Sans Bogle';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/bbh-sans-bogle-v1-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Adamina';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/adamina-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+p {
+    font-family:'Montserrat';
+    color: #4A2545;
+}
+
+h1,h2,h3 {
+    font-family:'BBH Sans Bogle';
+    color: #4A2545;
+}
+
+
+
+html {font-size: 14px;}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: false;
+  line-height: 1.65;
+  background-color: #DCCCA3;
+}
+
+p {
+  font-size: 1em;
+  color: #4A2545;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    color: #4A2545;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3
+.text-size-h1 {
+  font-family: 'BBH Sans Bogle', sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+  font-size: 3.05em;
+    color: #824C71;
+}
+
+
+
+
