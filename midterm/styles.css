@@ -1,11 +1,10 @@
-:root {
-  /* I like naming my colors by vibe instead of strict hue values */
+
+  /*Named accordingly based on the theme of Bali (Beach Island Getaway)*/
   --teal: #0f6b63;
   --sunset: #ff7b6a;
   --sand: #f6e9d7;
   --muted: #555;
 
-  /* maybe bump this up later for bigger screens */
   --max-width: 1100px;
 }
 
@@ -128,13 +127,13 @@ body {
 header {
   background: var(--sand);
   border-bottom: 4px solid var(--teal);
-  /* tried adding box-shadow here before — didn’t love it */
+
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem 1.2rem; /* small asymmetry, feels more organic */
+  padding: 1rem 1.2rem; 
 }
 
 .containter h1,h2 {
@@ -153,7 +152,7 @@ nav {
 }
 
 .brand img {
-  width: 55px; /* bumped up slightly */
+  width: 55px; 
   border-radius: 10px;
 }
 
