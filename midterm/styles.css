@@ -164,6 +164,14 @@ nav {
 }
 
 /* -------------- MENU LINKS ---------------- */
+.menu {
+  display: flex; /*flex box style to make a row */
+  gap: 1.2rem;
+  align-items:center;
+  justify-content: flex-end;
+  flex-wrap: wrap; 
+  
+
 
 .menu a {
   color: var(--teal);
