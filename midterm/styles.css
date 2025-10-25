@@ -116,10 +116,10 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6; /* changed slightly — feels better to read */
+  line-height: 1.6; 
   background: #F5F5F5;
   color: #222;
-  /* note to self: consider adding subtle texture background later */
+
 }
 
 /* ------------------- HEADER ------------------- */
@@ -198,8 +198,9 @@ nav {
 
 .hero img {
   width: 100%;
-  height: 420px;
+  height: auto;
   object-fit: cover;
+  max-height: 420px;
 }
 
 .hero .overlay {
