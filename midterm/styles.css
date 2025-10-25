@@ -189,11 +189,11 @@ nav {
 /* ------------------- HERO SECTION ------------------- */
 
 .hero {
-  position: relative;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 1.6rem;
-  height: 250px;
+  height:200px;
+
  
 }
 
