@@ -193,6 +193,7 @@ nav {
   overflow: hidden;
   margin-bottom: 1.6rem;
   height:200px;
+  aspect-ratio: 16/9; 
 
  
 }
@@ -213,10 +214,6 @@ nav {
 
 }
 
-  .hero.card{
-    padding: 0;
-  }
-
 
 
 
@@ -225,7 +222,7 @@ nav {
 
 .card {
   background: #fff;
-  padding: 0;
+  padding: 1.1rem 1.6rem;
   border: 1px solid #eee;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
