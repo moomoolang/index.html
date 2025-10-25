@@ -1,5 +1,7 @@
-:root{
-  /*Named accordingly based on the theme of Bali (Beach Island Getaway)*/
+:root {
+  /* Named based on the theme of Bali's beaches */
+
+  
   --teal: #0f6b63;
   --sunset: #ff7b6a;
   --sand: #f6e9d7;
@@ -116,10 +118,10 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6; 
+  line-height: 1.6; /* changed slightly — feels better to read */
   background: #F5F5F5;
   color: #222;
-
+  /* note to self: consider adding subtle texture background later */
 }
 
 /* ------------------- HEADER ------------------- */
@@ -127,12 +129,14 @@ body {
 header {
   background: var(--sand);
   border-bottom: 4px solid var(--teal);
+  /* tried adding box-shadow here before — didn’t love it */
 
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding: 1rem 1.2rem; /* small asymmetry, feels more organic */
   padding: 1rem 1.2rem; 
 }
 
@@ -152,6 +156,7 @@ nav {
 }
 
 .brand img {
+  width: 55px; /* bumped up slightly */
   width: 55px; 
   border-radius: 10px;
 }
@@ -165,12 +170,13 @@ nav {
 
 /* -------------- MENU LINKS ---------------- */
 .menu {
-  display: flex; /*flex box style to make a row */
-  gap: 1.2rem;
-  align-items:center;
-  justify-content: flex-end;
-  flex-wrap: wrap; 
-  
+ display: flex;
+ gap: 1.2rem;
+ justify-content: flex-end;
+ flex-wrap: wrap;
+
+
+}
 
 
 .menu a {
@@ -189,20 +195,17 @@ nav {
 /* ------------------- HERO SECTION ------------------- */
 
 .hero {
+  position: relative;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 1.6rem;
-  height:200px;
-  aspect-ratio: 16/9; 
-
- 
+  /* maybe add filter or gradient overlay someday */
 }
 
 .hero img {
   width: 100%;
-  height: 100%;
+  height: 420px;
   object-fit: cover;
-  display: block;
 }
 
 .hero .overlay {
@@ -211,7 +214,7 @@ nav {
   left: 20px;
   color: white;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-
+  /* could center text on mobile later */
 }
 
 
@@ -227,7 +230,6 @@ nav {
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   margin-bottom: 1.2rem;
-  overflow: hidden;
 }
 
 .card.intro p{
@@ -247,10 +249,10 @@ color: black;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   margin-bottom: 1.2rem;
   object-fit: cover;
-   padding: 1.1rem 1.6rem;
+   padding:0%;
 }
 
-  
+
 
 /* ------------------- BUTTONS ------------------- */
 
