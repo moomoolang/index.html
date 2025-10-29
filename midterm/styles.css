@@ -386,9 +386,30 @@ input:focus, textarea:focus {
 
   .activity img,
   .restaurant img {
+    --s: 280px; /* this controls the size */
     width: 100%;        /* full width on mobile */
     height: auto;
+    display: grid;
+    width: var(--s);
+    border-radius: 50%;
   }
+
+  .activity , .restaurant > img {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    animation: m 8s infinite linear;
+    transform-origin: 50% 120.7%;
+    padding: calc(var(--s) / 20);
+    position: relative;
+  }
+
+  @keyframes m {
+  100% { transform: rotate (-360deg); }
+  }
+    
 
   .statement img {
     width: 80%;         /* responsive width */
@@ -402,6 +423,82 @@ input:focus, textarea:focus {
     display: block;     /* removes inline spacing issues */
     padding: 0;         /* remove padding from image */
   }
+
+
+
+  
+
+.activity, .restaurant > img:nth-child(2) { animation-delay: -2s; } /* -1 * 8s / 4 */
+.activity, .restaurant >img:nth-child(3) { animation-delay: -4s; } /* -2 * 8s / 4 */
+.activity, .restaurant >img:nth-child(4) { animation-delay: -6s; } /* -3 * 8s / 4 */
+
+
+@keyframes m {
+  0%, 3% { transform: rotate(0); }
+  22%, 27% { transform: rotate(-90deg); }
+  47%, 52% { transform: rotate(-180deg); }
+  72%, 77% { transform: rotate(-270deg); }
+  98%, 100% { transform: rotate(-360deg); }
+}
+
+  .activity, ::after ,  .restaurant:: after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: inherit;
+  border-radius: 50%;
+  background: repeating-conic-gradient (#789048 0 30deg, #DFBA69 0 60deg);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  }
+  .activity::after, 
+  .restaurant::after,
+   { animation: m 8s infinite cubic-bezier(.5, -0.2, .5, 1.2);
+}
+
+.activity, .restaurant > img:nth-child(2) { animation-delay: -2s; } /* -1 * 8s / 4 */
+.activity, .restaurant > img:nth-child(3) { animation-delay: -4s; } /* -2 * 8s / 4 */
+.activity, .restaurant  > img:nth-child(4) { animation-delay: -6s; } /* -3 * 8s / 4 */
+
+  
+@for $i from 2 to ($n + 1) {
+  .gallery > img:nth-child(#{$i}) {
+    animation-delay: calc(#{(1 - $i) / $n} * 8s);
+  }
+}
+
+
+@keyframes m {
+  0%, 3% { transform: rotate(0); }
+  22%, 27% { transform: rotate(-90deg); }
+  47%, 52% { transform: rotate(-180deg); }
+  72%, 77% { transform: rotate(-270deg); }
+  98%, 100% {transform: rotate(-360deg); }
+}
+
+@keyframes m {
+  0% { transform: rotate(0); }
+  @for $i from 1 to $n {
+   #{($i / $n) * 100 - 2}%, #{($i / $n) * 100 + 3}% { transform: rotate(#{($i / $n) * -360}deg); }  
+  }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes m {
+  0%,3% { transform: rotate(0); }
+  @for $i from 1 to $n {
+    #{($i / $n) * 100 - 2}%, #{($i / $n) * 100 + 3}% { transform: rotate(#{($i / $n) * -360}deg); }  
+  }
+  98%,100% { transform: rotate(-360deg); }
+}
+
+R = 100% / (2 * sin(180deg / N)) = 50% / sin(180deg / N)
+
+
+transform-origin: 50% (50% / math.sin(180deg / $n) + 50%);
+
 
   /* optional: stack footer differently for small screens */
   footer {
