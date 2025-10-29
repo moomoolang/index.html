@@ -420,41 +420,46 @@ $n:6; /* number of images*/
   position: relative;
 }
 
-.activity > img, .restaurant > img {
-  grid-area: 1/1;
+/* -------------------------------------- */
+/* IMAGE SLIDESHOW INSIDE .activity .column */
+/* -------------------------------------- */
+
+.activity .column {
+  display: grid;
+  position: relative;
+  width: 320px;      /* match your image size */
+  height: 240px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.activity .column img {
+  grid-area: 1/1;    /* stack all images on top of each other */
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: cover;
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  animation: slide var(--d) infinite, z-order var(--d) infinite steps(1);
-  transform: translateX(0);
+  border: 4px solid #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  animation: slide 12s infinite, z-order 12s infinite steps(1);
 }
 
-/* Staggered animation delays for up to 6 images */
-.activity > img:nth-child(1),
-.restaurant > img:nth-child(1) { animation-delay: 0s; }
-.activity > img:nth-child(2),
-.restaurant > img:nth-child(2) { animation-delay: -1.6s; }
-.activity > img:nth-child(3),
-.restaurant > img:nth-child(3) { animation-delay: -3.2s; }
-.activity > img:nth-child(4),
-.restaurant > img:nth-child(4) { animation-delay: -4.8s; }
-.activity > img:nth-child(5),
-.restaurant > img:nth-child(5) { animation-delay: -6.4s; }
-.activity > img:nth-child(6),
-.restaurant > img:nth-child(6) { animation-delay: -8s; }
+/* staggered delays for each image — adjust # of images & timing */
+.activity .column img:nth-child(1) { animation-delay: 0s; }
+.activity .column img:nth-child(2) { animation-delay: -4s; }
+.activity .column img:nth-child(3) { animation-delay: -8s; }
 
-/* Keyframes */
+/* slide keyframes — moves slightly sideways */
 @keyframes slide {
-  0%, 100%, 16.6% { transform: translateX(0%) rotate(0deg); }
-  8.3% { transform: translateX(120%) rotate(5deg); }
+  0%, 100%, 33%   { transform: translateX(0); }
+  16.5%           { transform: translateX(120%) rotate(5deg); }
 }
 
+/* z-index cycle — brings each image to front in turn */
 @keyframes z-order {
-  0%, 8.3% { z-index: 2; }
-  8.4%, 100% { z-index: 1; }
+  0%, 16.5%   { z-index: 2; }
+  16.6%, 100% { z-index: 1; }
 }
+
 
 
 
