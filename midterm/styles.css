@@ -836,11 +836,9 @@ input:focus, textarea:focus {
 
   .activity img,
   .restaurant img {
-    --s: 280px; /* this controls the size */
     width: 100%;        /* full width on mobile */
     height: auto;
     display: grid;
-    width: var(--s);
     border-radius: 50%;
   }
 
@@ -862,11 +860,6 @@ input:focus, textarea:focus {
 
   
 
-.activity, .restaurant {
-  display: grid;
-  width: 220px;
-  position: relative;
-}
 
 
   /* optional: stack footer differently for small screens */
