@@ -394,22 +394,8 @@ input:focus, textarea:focus {
     border-radius: 50%;
   }
 
-  .activity , .restaurant > img {
-    grid-area: 1 / 1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    animation: m 8s infinite linear;
-    transform-origin: 50% 120.7%;
-    padding: calc(var(--s) / 20);
-    position: relative;
-  }
 
-  @keyframes m {
-  100% { transform: rotate (-360deg); }
-  }
-    
+
 
   .statement img {
     width: 80%;         /* responsive width */
@@ -424,80 +410,67 @@ input:focus, textarea:focus {
     padding: 0;         /* remove padding from image */
   }
 
-
-
   
+$n:6; /* number of images*/
 
-.activity, .restaurant > img:nth-child(2) { animation-delay: -2s; } /* -1 * 8s / 4 */
-.activity, .restaurant >img:nth-child(3) { animation-delay: -4s; } /* -2 * 8s / 4 */
-.activity, .restaurant >img:nth-child(4) { animation-delay: -6s; } /* -3 * 8s / 4 */
-
-
-@keyframes m {
-  0%, 3% { transform: rotate(0); }
-  22%, 27% { transform: rotate(-90deg); }
-  47%, 52% { transform: rotate(-180deg); }
-  72%, 77% { transform: rotate(-270deg); }
-  98%, 100% { transform: rotate(-360deg); }
-}
-
-  .activity, ::after ,  .restaurant:: after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: inherit;
-  border-radius: 50%;
-  background: repeating-conic-gradient (#789048 0 30deg, #DFBA69 0 60deg);
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  }
-  .activity::after, 
-  .restaurant::after,
-   { animation: m 8s infinite cubic-bezier(.5, -0.2, .5, 1.2);
-}
-
-.activity, .restaurant > img:nth-child(2) { animation-delay: -2s; } /* -1 * 8s / 4 */
-.activity, .restaurant > img:nth-child(3) { animation-delay: -4s; } /* -2 * 8s / 4 */
-.activity, .restaurant  > img:nth-child(4) { animation-delay: -6s; } /* -3 * 8s / 4 */
-
+.activity, .restaurant  {
+  --d: 10s; /* duration */
   
-@for $i from 2 to ($n + 1) {
-  .gallery > img:nth-child(#{$i}) {
-    animation-delay: calc(#{(1 - $i) / $n} * 8s);
+  display: grid;
+  width: 220px;
+}
+.activity > img , .restaurant > img{
+  grid-area: 1/1;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  z-index: 2;
+  animation: 
+    slide var(--d) infinite,
+    z-order var(--d) infinite steps(1);
+}
+.activity img , .restaurant img: last-child {
+  animation-name: slide, z-order-last;
+}
+
+@for $i from 1 to ($n + 1) {
+ .activity > img , .restaurant > img:nth-child(#{$i}) {
+    animation-delay: calc(#{(1 - $i)/$n}*var(--d));
+    --r: #{(-20 + random(40))*1deg};
   }
 }
 
-
-@keyframes m {
-  0%, 3% { transform: rotate(0); }
-  22%, 27% { transform: rotate(-90deg); }
-  47%, 52% { transform: rotate(-180deg); }
-  72%, 77% { transform: rotate(-270deg); }
-  98%, 100% {transform: rotate(-360deg); }
+@keyframes slide {
+  #{50/$n}%  {transform: translateX(120%) rotate(var(--r))}
+  0%,
+  100%,
+  #{100/$n}% {transform: translateX(0%)   rotate(var(--r))}
 }
 
-@keyframes m {
-  0% { transform: rotate(0); }
-  @for $i from 1 to $n {
-   #{($i / $n) * 100 - 2}%, #{($i / $n) * 100 + 3}% { transform: rotate(#{($i / $n) * -360}deg); }  
-  }
-  100% { transform: rotate(-360deg); }
+@keyframes z-order {
+  #{50/$n}%,
+  #{100/$n}% {z-index: 1}
+  #{100 - 100/$n}% {z-index: 2}
 }
 
-@keyframes m {
-  0%,3% { transform: rotate(0); }
-  @for $i from 1 to $n {
-    #{($i / $n) * 100 - 2}%, #{($i / $n) * 100 + 3}% { transform: rotate(#{($i / $n) * -360}deg); }  
-  }
-  98%,100% { transform: rotate(-360deg); }
+@keyframes z-order-last {
+  #{50/$n}%,
+  #{100/$n}% {z-index: 1}
+  #{100 - 50/$n}% {z-index: 2}
 }
 
-R = 100% / (2 * sin(180deg / N)) = 50% / sin(180deg / N)
 
 
-transform-origin: 50% (50% / math.sin(180deg / $n) + 50%);
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #CDB380;
+  overflow: hidden;
+}
 
 
   /* optional: stack footer differently for small screens */
