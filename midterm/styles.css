@@ -413,52 +413,47 @@ input:focus, textarea:focus {
   
 $n:6; /* number of images*/
 
-.activity, .restaurant  {
-  --d: 10s; /* duration */
-  
+.activity, .restaurant {
+  --d: 10s; /* animation duration */
   display: grid;
   width: 220px;
+  position: relative;
 }
-.activity > img , .restaurant > img{
+
+.activity > img, .restaurant > img {
   grid-area: 1/1;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
   border: 10px solid #f2f2f2;
   box-shadow: 0 0 4px #0007;
-  z-index: 2;
-  animation: 
-    slide var(--d) infinite,
-    z-order var(--d) infinite steps(1);
-}
-.activity img , .restaurant img: last-child {
-  animation-name: slide, z-order-last;
+  animation: slide var(--d) infinite, z-order var(--d) infinite steps(1);
+  transform: translateX(0);
 }
 
-@for $i from 1 to ($n + 1) {
- .activity > img , .restaurant > img:nth-child(#{$i}) {
-    animation-delay: calc(#{(1 - $i)/$n}*var(--d));
-    --r: #{(-20 + random(40))*1deg};
-  }
-}
+/* Staggered animation delays for up to 6 images */
+.activity > img:nth-child(1),
+.restaurant > img:nth-child(1) { animation-delay: 0s; }
+.activity > img:nth-child(2),
+.restaurant > img:nth-child(2) { animation-delay: -1.6s; }
+.activity > img:nth-child(3),
+.restaurant > img:nth-child(3) { animation-delay: -3.2s; }
+.activity > img:nth-child(4),
+.restaurant > img:nth-child(4) { animation-delay: -4.8s; }
+.activity > img:nth-child(5),
+.restaurant > img:nth-child(5) { animation-delay: -6.4s; }
+.activity > img:nth-child(6),
+.restaurant > img:nth-child(6) { animation-delay: -8s; }
 
+/* Keyframes */
 @keyframes slide {
-  #{50/$n}%  {transform: translateX(120%) rotate(var(--r))}
-  0%,
-  100%,
-  #{100/$n}% {transform: translateX(0%)   rotate(var(--r))}
+  0%, 100%, 16.6% { transform: translateX(0%) rotate(0deg); }
+  8.3% { transform: translateX(120%) rotate(5deg); }
 }
 
 @keyframes z-order {
-  #{50/$n}%,
-  #{100/$n}% {z-index: 1}
-  #{100 - 100/$n}% {z-index: 2}
-}
-
-@keyframes z-order-last {
-  #{50/$n}%,
-  #{100/$n}% {z-index: 1}
-  #{100 - 50/$n}% {z-index: 2}
+  0%, 8.3% { z-index: 2; }
+  8.4%, 100% { z-index: 1; }
 }
 
 
