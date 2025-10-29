@@ -741,45 +741,39 @@ footer {
 }
 
 
-  .activity .column {
-   poistion: relative;
-    width: 320px;
-    height: 240px;
-    overflow: hidden;
-
-}
-
+/* ------------------- ACTIVITY IMAGE SLIDESHOW ------------------- */
 .activity .column {
   position: relative;
-  width: 320px;
-  height: 240px;
+  width: 320px;      /* match your image width */
+  height: 240px;     /* match your image height */
   overflow: hidden;
 }
 
 .activity .column img {
-  position: absolute;
+  position: absolute;   /* stack images on top of each other */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0; /* remove rounded corners */
-  animation: fade 9s infinite;
-  opacity: 0;
+  opacity: 0;           /* start invisible */
+  animation: fadeSlide 12s infinite;
 }
 
+/* stagger each image */
 .activity .column img:nth-child(1) { animation-delay: 0s; }
-.activity .column img:nth-child(2) { animation-delay: 3s; }
-.activity .column img:nth-child(3) { animation-delay: 6s; }
+.activity .column img:nth-child(2) { animation-delay: 4s; }
+.activity .column img:nth-child(3) { animation-delay: 8s; }
 
-@keyframes fade {
+/* fade in/out keyframes */
+@keyframes fadeSlide {
   0% { opacity: 0; }
-  11% { opacity: 1; }
+  8% { opacity: 1; }
   33% { opacity: 1; }
-  44% { opacity: 0; }
+  41% { opacity: 0; }
   100% { opacity: 0; }
 }
-  
+
 .restaurant h3{
   color:#0f6b63;
 }
