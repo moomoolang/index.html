@@ -1,7 +1,5 @@
 :root {
   /* Named based on the theme of Bali's beaches */
-
-  
   --teal: #0f6b63;
   --sunset: #ff7b6a;
   --sand: #f6e9d7;
@@ -42,40 +40,21 @@
   font-weight: 900;
   src: url('fonts/poppins-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* poppins-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/poppins-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* poppins-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 900;
-  src: url('fonts/poppins-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
 
 /* quick reset */
 * {
   box-sizing: border-box;
 }
 
-
 /*Highlights*/
-
 .highlights{
   display: flex;
   flex-direction: column;
-  gap: 1.5 rem;
+  gap: 1.5rem;
   margin-bottom:2rem;
 }
 
-.highlight-image 
-{
+.highlight-image {
   position: relative;
   background: url("images/abstract-light-blue.jpg");
   background-size: cover;
@@ -89,11 +68,11 @@
 }
 
 .highlight-image::before {
- content:'';
- position:absolute;
- top: 0; left: 0; right: 0; bottom: 0;
- background: rgba(0,0,0,0.3); /* black with 30% */
- z-index: 1;
+  content:'';
+  position:absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3); /* black with 30% */
+  z-index: 1;
 }
 
 .highlight-image *{
@@ -101,7 +80,7 @@
   z-index: 2;
 }
 
-.highlight-image.h2, 
+.highlight-image h2, 
 .highlight-image p {
   position: relative;
   z-index: 2;
@@ -114,7 +93,6 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -125,27 +103,24 @@ body {
 }
 
 /* ------------------- HEADER ------------------- */
-
 header {
   background: var(--sand);
   border-bottom: 4px solid var(--teal);
   /* tried adding box-shadow here before — didn’t love it */
-
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1rem 1.2rem; /* small asymmetry, feels more organic */
-  padding: 1rem 1.2rem; 
 }
 
-.containter h1,h2 {
-color: var(--teal);
+.container h1,h2 {
+  color: var(--teal);
 }
 
-.containter p{
-color: black;
+.container p{
+  color: black;
 }
 
 nav {
@@ -157,7 +132,6 @@ nav {
 
 .brand img {
   width: 55px; /* bumped up slightly */
-  width: 55px; 
   border-radius: 10px;
 }
 
@@ -170,14 +144,11 @@ nav {
 
 /* -------------- MENU LINKS ---------------- */
 .menu {
- display: flex;
- gap: 1.2rem;
- justify-content: flex-end;
- flex-wrap: wrap;
-
-
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
-
 
 .menu a {
   color: var(--teal);
@@ -188,12 +159,12 @@ nav {
 }
 
 /* note: might add an underline animation later */
-.menu a:hover {
+.menu a:hover,
+.menu a.active {
   color: var(--sunset);
 }
 
 /* ------------------- HERO SECTION ------------------- */
-
 .hero {
   position: relative;
   border-radius: 10px;
@@ -217,12 +188,7 @@ nav {
   /* could center text on mobile later */
 }
 
-
-
-
-
 /* ------------------- CARD STYLE ------------------- */
-
 .card {
   background: #fff;
   padding: 1.1rem 1.6rem;
@@ -237,25 +203,21 @@ nav {
 }
 
 .restaurant p{
-color: black;
+  color: black;
 }
 
-  .statement img{
+.statement img{
   width: 320px;
   height: 320px;
   border-radius: 75%;
   border: 1px solid #eee;
-  border-radius: 75%x;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   margin-bottom: 1.2rem;
   object-fit: cover;
-   padding:0%;
+  padding:0%;
 }
 
-
-
 /* ------------------- BUTTONS ------------------- */
-
 .btn {
   background: var(--teal);
   color: #fff;
@@ -265,7 +227,6 @@ color: black;
   cursor: pointer;
   font-weight: 600;
   text-decoration: none;
-  /* weird bug in Safari once — left this here just in case */
   display: inline-block;
 }
 
@@ -275,21 +236,18 @@ color: black;
   color: var(--teal);
 }
 
-/* Added separate hover states to look more “hand-tuned” */
 .btn:hover {
   background: var(--sunset);
   border-color: var(--sunset);
   color: #fff;
 }
 
-/* might refine secondary hover later */
 .btn.secondary:hover {
   background: var(--teal);
   color: #fff;
 }
 
 /* ------------------- CTA ROW ------------------- */
-
 .cta-row {
   margin-top: 1rem;
   display: flex;
@@ -298,7 +256,6 @@ color: black;
 }
 
 /* ------------------- FOOTER ------------------- */
-
 footer {
   background: var(--teal);
   color: #fff;
@@ -309,7 +266,6 @@ footer {
 }
 
 /* ------------------- ACTIVITIES + RESTAURANTS ------------------- */
-
 .activity, 
 .restaurant {
   display: flex;
@@ -323,15 +279,6 @@ footer {
   width: 320px;
   border-radius: 10px;
   object-fit: cover;
-  /* note: might add box-shadow if time allows */
-}
-
-.restaurant h3{
-  color:#0f6b63;
-}
-
-.activity p {
-color:black;
 }
 
 .column {
@@ -339,418 +286,14 @@ color:black;
   padding: 5px;
 }
 
-.column image {
- width: 320px;
-}
-
-.container img{
-  border-radius: 10px;
-  object-fit: cover;
-}
-/* ------------------- FORMS ------------------- */
-
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  gap: 0.6rem;
-}
-
-input, textarea {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 0.55rem;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--teal);
-  box-shadow: 0 0 4px rgba(15, 107, 99, 0.3);
-}
-
-/* ------------------- RESPONSIVE ------------------- */
-
-@media (max-width: 800px) {
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero img {
-    height: auto;       /* maintain aspect ratio */
-    width: 100%;        /* full width for mobile */
-  }
-
-  .activity img,
-  .restaurant img {
-    --s: 280px; /* this controls the size */
-    width: 100%;        /* full width on mobile */
-    height: auto;
-    display: grid;
-    width: var(--s);
-    border-radius: 50%;
-  }
-
-
-
-
-  .statement img {
-    width: 80%;         /* responsive width */
-    max-width: 320px;   /* don’t get too big */
-    aspect-ratio: 1 / 1; /* keeps image square for circular shape */
-    border-radius: 50%; /* makes it circular */
-    object-fit: cover;  /* crop image to fit square */
-    border: 1px solid #eee;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    margin: 1rem auto;  /* center and spacing */
-    display: block;     /* removes inline spacing issues */
-    padding: 0;         /* remove padding from image */
-  }
-
-  
-$n:6; /* number of images*/
-
-.activity, .restaurant {
-  --d: 10s; /* animation duration */
-  display: grid;
-  width: 220px;
-  position: relative;
-}
-
-:root {
-  /* Named based on the theme of Bali's beaches */
-
-  
-  --teal: #0f6b63;
-  --sunset: #ff7b6a;
-  --sand: #f6e9d7;
-  --muted: #555;
-
-  --max-width: 1100px;
-}
-
-/* playfair-display-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/playfair-display-v40-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* playfair-display-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 900;
-  src: url('fonts/playfair-display-v40-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* poppins-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/poppins-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* poppins-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 900;
-  src: url('fonts/poppins-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* poppins-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/poppins-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* poppins-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 900;
-  src: url('fonts/poppins-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* quick reset */
-* {
-  box-sizing: border-box;
-}
-
-
-/*Highlights*/
-
-.highlights{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5 rem;
-  margin-bottom:2rem;
-}
-
-.highlight-image 
-{
-  position: relative;
-  background: url("images/abstract-light-blue.jpg");
-  background-size: cover;
-  background-position: center;
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  overflow: hidden;
-}
-
-.highlight-image::before {
- content:'';
- position:absolute;
- top: 0; left: 0; right: 0; bottom: 0;
- background: rgba(0,0,0,0.3); /* black with 30% */
- z-index: 1;
-}
-
-.highlight-image *{
-  position: relative;
-  z-index: 2;
-}
-
-.highlight-image.h2, 
-.highlight-image p {
-  position: relative;
-  z-index: 2;
-  color: white;
-}
-.highlight-image img{
-  max-width: 330px;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6; /* changed slightly — feels better to read */
-  background: #F5F5F5;
-  color: #222;
-  /* note to self: consider adding subtle texture background later */
-}
-
-/* ------------------- HEADER ------------------- */
-
-header {
-  background: var(--sand);
-  border-bottom: 4px solid var(--teal);
-  /* tried adding box-shadow here before — didn’t love it */
-
-}
-
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 1rem 1.2rem; /* small asymmetry, feels more organic */
-  padding: 1rem 1.2rem; 
-}
-
-.containter h1,h2 {
-color: var(--teal);
-}
-
-.containter p{
-color: black;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.brand img {
-  width: 55px; /* bumped up slightly */
-  width: 55px; 
-  border-radius: 10px;
-}
-
-.brand h1 {
-  font-family: 'Playfair Display', serif;
-  color: var(--teal);
-  font-size: 1.45rem;
-  margin: 0;
-}
-
-/* -------------- MENU LINKS ---------------- */
-.menu {
- display: flex;
- gap: 1.2rem;
- justify-content: flex-end;
- flex-wrap: wrap;
-
-
-}
-
-
-.menu a {
-  color: var(--teal);
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 0.7rem;
-  transition: color 0.2s ease;
-}
-
-/* note: might add an underline animation later */
-.menu a:hover {
-  color: var(--sunset);
-}
-
-/* ------------------- HERO SECTION ------------------- */
-
-.hero {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 1.6rem;
-  /* maybe add filter or gradient overlay someday */
-}
-
-.hero img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-}
-
-.hero .overlay {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  /* could center text on mobile later */
-}
-
-
-
-
-
-/* ------------------- CARD STYLE ------------------- */
-
-.card {
-  background: #fff;
-  padding: 1.1rem 1.6rem;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1.2rem;
-}
-
-.card.intro p{
-  color: black;
-}
-
-.restaurant p{
-color: black;
-}
-
-  .statement img{
-  width: 320px;
-  height: 320px;
-  border-radius: 75%;
-  border: 1px solid #eee;
-  border-radius: 75%x;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1.2rem;
-  object-fit: cover;
-   padding:0%;
-}
-
-
-
-/* ------------------- BUTTONS ------------------- */
-
-.btn {
-  background: var(--teal);
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  text-decoration: none;
-  /* weird bug in Safari once — left this here just in case */
-  display: inline-block;
-}
-
-.btn.secondary {
-  background: transparent;
-  border: 2px solid var(--teal);
-  color: var(--teal);
-}
-
-/* Added separate hover states to look more “hand-tuned” */
-.btn:hover {
-  background: var(--sunset);
-  border-color: var(--sunset);
-  color: #fff;
-}
-
-/* might refine secondary hover later */
-.btn.secondary:hover {
-  background: var(--teal);
-  color: #fff;
-}
-
-/* ------------------- CTA ROW ------------------- */
-
-.cta-row {
-  margin-top: 1rem;
-  display: flex;
-  gap: 0.8rem;
-  flex-wrap: wrap; /* added so buttons don’t break layout */
-}
-
-/* ------------------- FOOTER ------------------- */
-
-footer {
-  background: var(--teal);
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2.4rem; /* slightly increased for breathing room */
-  font-size: 0.95rem;
-}
-
-/* ------------------- ACTIVITIES + RESTAURANTS ------------------- */
-
-.activity, 
-.restaurant {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-
-
-/* ------------------- ACTIVITY SLIDESHOW ------------------- */
-
+/* ------------------- SLIDESHOW ------------------- */
 /* slideshow container */
 .slideshow {
   position: relative;
   width: 100%;
   height: 240px; /* match your image height */
   overflow: hidden;
-  border-radius: 0; /* optional */
+  border-radius: 0; /* optional: remove rounded corners */
 }
 
 /* stack all images on top of each other */
@@ -772,36 +315,11 @@ footer {
 
 /* keyframes for fading images in/out */
 @keyframes fade {
-  0%, 33.33% { opacity: 0; }
+  0%, 33.33%, 100% { opacity: 0; }
   10%, 23.33% { opacity: 1; }
-  33.33%, 100% { opacity: 0; }
 }
 
-
-
-.restaurant h3{
-  color:#0f6b63;
-}
-
-.activity p {
-color:black;
-}
-
-.column {
-  flex: 33.33%;
-  padding: 5px;
-}
-
-.column image {
- width: 320px;
-}
-
-.container img{
-  border-radius: 10px;
-  object-fit: cover;
-}
 /* ------------------- FORMS ------------------- */
-
 form {
   display: flex;
   flex-direction: column;
@@ -824,7 +342,6 @@ input:focus, textarea:focus {
 }
 
 /* ------------------- RESPONSIVE ------------------- */
-
 @media (max-width: 800px) {
 
   nav {
@@ -841,12 +358,8 @@ input:focus, textarea:focus {
   .restaurant img {
     width: 100%;        /* full width on mobile */
     height: auto;
-    display: grid;
     border-radius: 50%;
   }
-
-
-
 
   .statement img {
     width: 80%;         /* responsive width */
@@ -861,31 +374,10 @@ input:focus, textarea:focus {
     padding: 0;         /* remove padding from image */
   }
 
-  
-
-
-
-  /* optional: stack footer differently for small screens */
   footer {
     padding: 1rem;
     font-size: 0.9rem;
   }
-
-
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
-  background: #CDB380;
-  overflow: hidden;
 }
 
-
-  /* optional: stack footer differently for small screens */
-  footer {
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
 
