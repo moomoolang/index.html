@@ -741,38 +741,40 @@ footer {
 }
 
 
-/* ------------------- ACTIVITY IMAGE SLIDESHOW ------------------- */
-.activity .column {
+/* ------------------- ACTIVITY SLIDESHOW ------------------- */
+
+/* slideshow container */
+.slideshow {
   position: relative;
-  width: 320px;      /* match your image width */
-  height: 240px;     /* match your image height */
+  width: 100%;
+  height: 240px; /* match your image height */
   overflow: hidden;
+  border-radius: 0; /* optional: remove rounded corners */
 }
 
-.activity .column img {
-  position: absolute;   /* stack images on top of each other */
+/* stack all images on top of each other */
+.slideshow img {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;           /* start invisible */
-  animation: fadeSlide 12s infinite;
+  opacity: 0;
+  animation: fade 12s infinite;
 }
 
-/* stagger each image */
-.activity .column img:nth-child(1) { animation-delay: 0s; }
-.activity .column img:nth-child(2) { animation-delay: 4s; }
-.activity .column img:nth-child(3) { animation-delay: 8s; }
+/* stagger animation delays for each image in the slideshow */
+.slideshow img:nth-child(1) { animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 4s; }
+.slideshow img:nth-child(3) { animation-delay: 8s; }
 
-/* fade in/out keyframes */
-@keyframes fadeSlide {
-  0% { opacity: 0; }
-  8% { opacity: 1; }
-  33% { opacity: 1; }
-  41% { opacity: 0; }
-  100% { opacity: 0; }
+/* keyframes for fading images in/out */
+@keyframes fade {
+  0%, 25%, 100% { opacity: 0; }
+  5%, 20% { opacity: 1; }
 }
+
 
 .restaurant h3{
   color:#0f6b63;
