@@ -25,11 +25,17 @@
  Insert all your glorious CSS styles below! */
  /* ====== Base Layout and Background ====== */
 body {
-  font-family: 'Urbanist', sans-serif;
   margin: 0;
   padding: 2rem 10%;
   color: #2a2a2a;
   line-height: 1.7;
+
+
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
   background-image: url('https://files.123freevectors.com/wp-content/original/262-vector-cloud-background.webp');
   background-repeat: repeat;
