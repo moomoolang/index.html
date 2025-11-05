@@ -23,14 +23,7 @@
        
 
  Insert all your glorious CSS styles below! */
- /* ====== Base Layout and Background ====== */
-body {
-  margin: 0;
-  padding: 2rem 10%;
-  color: #2a2a2a;
-  line-height: 1.7;
-
-
+/*=== Font family ==== */
 /* jersey-10-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -39,6 +32,15 @@ body {
   font-weight: 400;
   src: url('/fonts/jersey-10-v4-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+ /* ====== Base Layout and Background ====== */
+body {
+  margin: 0;
+  padding: 2rem 10%;
+  color: #2a2a2a;
+  line-height: 1.7;
+
+
+
       
 
   background-image: url('https://files.123freevectors.com/wp-content/original/262-vector-cloud-background.webp');
