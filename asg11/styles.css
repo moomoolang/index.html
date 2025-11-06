@@ -40,13 +40,18 @@
   src: url('fonts/lexend-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/*==Base font size===*/
+html{
+      font-size: 16px;
+}
+
 
 /* ====== Base Layout and Background ====== */
 body {
   margin: 0;
   padding: 2rem 10%;
   color: #2a2a2a;
-  font-family:'Jersey 10';
+ font-family: 'Lexend', sans-serif;
   line-height: 1.7;
   background-image: url('https://files.123freevectors.com/wp-content/original/262-vector-cloud-background.webp');
   background-repeat: repeat;
@@ -56,8 +61,18 @@ body {
   scroll-behavior: smooth;
 }
 
+
+/*==== Paragraphs ====*/
+p {
+font-size: 1 em;
+color: #2a2a2a;
+line-height: 1.6;
+text-align: justifty;
+margin-bottom: 1.2rem;
+
+
 /* ====== Headings ====== */
-h1 {
+h1,h2 {
   font-family: 'Jersey 10', sans-serif;
   font-weight: 700;
   line-height: 1.3;
@@ -66,23 +81,13 @@ h1 {
   position: relative;
 }
 
+/*=== Type Scale */
+h1, .text-size-h1 {font-size: 3.05 em; }
+h2, .text-size-h2 {font-size: 2.44 em; }
+.text-caption {font-size: 0.8 em; }
+small, .text-small { font-size: 0.64em; }
+      
 
-h1 { font-size: 2.2em; } 
-h2 {
-  font-size: 2em;
-  font-family: 'Lexend', sans-serif;
-  display: block;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 20px 20px 0 0;
-  padding: 1.5rem 2rem 1rem 2rem;
-  margin: 2rem 0 0 0;
-  position: relative;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-h3 { font-size: 1.8em; }
-h4 { font-size: 1.6em; }
-h5 { font-size: 1.4em; }
-h6 { font-size: 1.2em; }
 
 /* ====== Paragraph Styling ====== */
 p {
