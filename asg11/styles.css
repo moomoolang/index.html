@@ -29,7 +29,7 @@
  font-family:'Jersey 10';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/jersey-10-v4-latin-regular.woff2') format('woff2');
+  src: url('fonts/jersey-10-v4-latin-regular.woff2') format('woff2');
 }
 
 /* ====== Base Layout and Background ====== */
