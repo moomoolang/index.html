@@ -93,11 +93,13 @@ header p {
 }
 
 .creative-roles {
-    background-color: #fff8f0;
+    background-color: #2f2b28;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
+    color: #e3f7f1;       
+   
 }
 
 .list-item img, .creative-roles img {
